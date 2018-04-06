@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from core.models import Usuario
+from core.models import Produto
 
 def index(request):
 	return render(request, "index.html")		
 
 def Produto(request):
 	contexto = {
-		"users":Usuario.objects.all()
+		"produtos":Produto.objects.all()
 	}
 	return render(request,"index.html", contexto)
 

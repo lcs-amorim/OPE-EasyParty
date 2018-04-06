@@ -69,9 +69,8 @@
 		<h1>Produtos</h1>
 		<section class="lista_produtos centralizar_elemento">
 			<section class="novidades">
-			{% for user in users %}
+			{%for produto in produtos %}
 			    <div class="quadro_produto posicao_01 ">
-				      	{{user}}
 				      	{%if produto.imagem and produto.ativo%}
 					        <a href="produto.html">		
 					        	<figure class="foto_produto">
