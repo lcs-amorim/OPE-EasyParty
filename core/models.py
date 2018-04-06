@@ -48,10 +48,15 @@ class Produto(models.Model):
     vender = models.BooleanField(db_column='Vender', default=True)
     ativo = models.BooleanField(db_column='Ativo',default=True)
 
+    def __str__(self):
+        return self.nome_p
+
     class Meta:
         managed = True
         db_table = 'Produto'
-
+        verbose_name = 'Produto'
+        verbose_name_plural = 'Produtos'
+        ordering = ['codigo_p']   
 
 class Usuario(models.Model):
     codigo_u = models.AutoField(db_column='Codigo_U', primary_key=True)  # Field name made lowercase.

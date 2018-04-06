@@ -4,16 +4,80 @@
 	<meta charset="UTF-8">
 	<title>Si Lima - Festas e Eventos</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1"/>
-	<link rel="stylesheet" href="static/css/main.css">
-	<link rel="stylesheet" href="static/css/slider.css">
+	<link rel="stylesheet" type="text/css" href="static/css/rodape.css">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+	<link rel="stylesheet" type="text/css" href="static/css/slider.css">
+	<link rel="stylesheet" type="text/css" href="static/css/css_topo/grid.css"/>
+	<link rel="stylesheet" type="text/css" href="static/css/css_topo/search.css"/>
+	<link rel="stylesheet" type="text/css" href="static/css/css_topo/teste-hvr.css"/>
 </head>
+
 <body>
+	<header>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<div class="wrapper header center link">
+		  <div class="box box1 hvr-fade"><a href="index"><div class="image"></div></a></div>
+		  <div class="box box2 hvr-fade"><a href="Menu"><div class="image1">Menu</div></a></div>
+		  <div class="box hvr-fade"><a href="Empresa"><div class="image2">Empresa</div></a></div>
+		  <div class="box hvr-fade"><a href="Produtos"><div class="image3">Produtos</div></a></div>
+		  <div class="box hvr-fade"><a href="Kits"><div class="image4">Kit Festa</div></a></div>
+		  <div class="box hvr-fade"><a href="Alugue"><div class="image5">Alugue</div></a></div>
+		  <div class="box hvr-fade"><a href="Carrinho"><div class="image6">Carrinho</div></a></div>
+		  <div class="box hvr-fade"><a href="Login"><div class="image7">Login</div></a></div>
+		</div>
+		<div id="wrap">
+		  <form action="" autocomplete="on">
+		  <input id="search" name="search" type="text" placeholder="O que está procurando?"><input id="search_submit" value="Rechercher" type="submit">
+		  </form>
+		</div>
+	</header>
 		
 		{% block conteudo %}
 
+		
+
+
 		{% endblock %}
+
+<footer class="rodape">
+		<img class="arabesco" src="static/images/Arabesco.png">
+		<img class="arabesco_bottom" src="static/images/Arabesco.png">
+		<p class="servico">Serviços</p>
+	<nav class="menu_rodape">	
+		<picture class="elipse_Silima"><a href="completar"><img  class="img_silima" src="static/images/Logo.png"></a></picture>
+		<picture class="elipse_calculadora"><a href="completar"><img class="img_calculadora" src="static/images/calculadora.png"></a></picture>
+		<picture class="elipse_festas"><a href="completar"><img class="img_festa" src="static/images/Festas.png"></a></picture>
+		<picture class="elipse_servicos"><a href="completar"><img class="img_servico" src="static/images/servico.png"></a></picture>
+		<picture class="elipse_nossas-dicas"><a href="completar"><img class="img_nossasdicas" src="static/images/nossasdicas.png"></a></picture>
+		<picture class="elipse_fale-conosco"><a href="completar"><img class="img_fale-conosco" src="static/images/faleconosco.png"></a></picture>
+		<picture class="elipse_contato"><a href="completar"><img class="img_contato" src="static/images/contato.png"></a></picture>
+	
+		<p class="tit_silima">A Silima</p>
+		<p class="tit_calculadora">Calculadora</p>
+		<p class="tit_festas">Festas</p>
+		<p class="tit_servicos">Serviços</p>
+		<p class="tit_nossasdicas">Nossas Dicas</p>
+		<p class="tit_fale-conosco">Fale Conosco</p>
+		<p class="tit_contato">Contato</p>
+
+	</nav>
+	<section class="obrigado">
+		<p>OBRIGADO POR NOS VISITAR! VOLTE SEMPRE</p>
+	</section>
+	<section class="pagamento">
+		<p>Formas de Pagamento:</p>
+		<img class="img_pagamentos" src="static/images/Formas_de_Pagamento.PNG">
+		<p>Todos os pagamentos são processadors por: Pagseguro</p>
+		<img class="img_selos" src="static/images/selos.png">
+		<p>Este trabalho é fruto intelectual dos alunos de Sistemas de Informações - 2017/1 - Faculdade Impacta Técnologia Responsável pelo sistema Easy Party </p>
+	</section>
+
+	</footer>
 
 <script src="static/js/jquery.js"></script>
 <script src="static/js/slider.js"></script>
+
 </body>
 </html>

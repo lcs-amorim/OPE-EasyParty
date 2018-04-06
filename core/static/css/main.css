@@ -15,20 +15,27 @@
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 40px 274px;
     width: 100%;
-    margin: auto;
+    text-align: center;
 }
 
-.titulo{
+.titulo_novidade{
 	grid-row: 1;
 	grid-column-start: 1; 
     grid-column-end: 5;
 	width: 100%; 
 	line-height:40px; 
 	font-size:25px; 
-	color: #000; 
+	color: #ff6e00; 
 	float:left; 
 	text-align:center; 	
 }
+
+.titulo{ 
+	font-size:25px; 
+	color: #ff6e00; 
+	text-align:center; 	
+}
+
 
 .banner_item_01{
 	grid-row: 2;
@@ -68,9 +75,9 @@
 }
 
 
-.novidades{
+.lista_produtos{
 	display: grid;
-	grid-template-rows: 390px 390px;
+	grid-template-rows: 390px;
 	grid-template-columns: 25% 25% 25% 25%;		
 }
 
@@ -90,37 +97,6 @@
 .posicao_01{
 	grid-row: 1;
 	grid-column: 1; 
-}
-
-.posicao_02{
-	grid-row: 1;
-	grid-column: 2; 
-}
-.posicao_03{
-	grid-row: 1;
-	grid-column: 3; 
-}
-.posicao_04{
-	grid-row: 1;
-	grid-column: 4; 
-}
-
-.posicao_05{
-	grid-row: 2;
-	grid-column: 1; 
-}
-
-.posicao_06{
-	grid-row: 2;
-	grid-column: 2; 
-}
-.posicao_07{
-	grid-row: 2;
-	grid-column: 3; 
-}
-.posicao_08{
-	grid-row: 2;
-	grid-column: 4; 
 }
 
 
@@ -184,6 +160,7 @@
 .botoes_quadro_produto button:hover {
 	background:#057ec5;
 }
+
 
 /* Fim - lista produtos*/
 
