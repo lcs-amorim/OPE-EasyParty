@@ -6,7 +6,7 @@ class Colaboradores(models.Model):
     telefone_c = models.IntegerField(db_column='Telefone_C')  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'Colaboradores'
 
 
@@ -18,7 +18,7 @@ class Contratos(models.Model):
     endereco_ct = models.CharField(db_column='Endereco_CT', max_length=100)  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'Contratos'
 
 
@@ -31,7 +31,7 @@ class Fornecedor(models.Model):
     categoria_f = models.CharField(db_column='Categoria_F', max_length=100)  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'Fornecedor'
 
 
@@ -41,9 +41,15 @@ class Produto(models.Model):
     nome_p = models.CharField(db_column='Nome_P', max_length=100)  # Field name made lowercase.
     quantidade = models.SmallIntegerField(db_column='Quantidade')  # Field name made lowercase.
     categoria_p = models.CharField(db_column='Categoria_P', max_length=100)  # Field name made lowercase.
+    imagem = models.ImageField(db_column='Imagem',upload_to='banco_de_imagens')
+    descricao = models.TextField(db_column='Descricao_P')
+    custo_p = models.IntegerField(db_column='Custo_P', blank=True, null=True)
+    preco_p = models.IntegerField(db_column='Preço_P')
+    vender = models.BooleanField(db_column='Vender', default=True)
+    ativo = models.BooleanField(db_column='Ativo',default=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'Produto'
 
 
@@ -59,7 +65,7 @@ class Usuario(models.Model):
     news = models.NullBooleanField(db_column='News')  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'Usuario'
 
 
