@@ -59,12 +59,12 @@ class Categoria(models.Model):
 
 class Produto(models.Model):
     codigo_p = models.AutoField(db_column='Codigo_P', primary_key=True)  # Field name made lowercase.
-    nome_f = models.ForeignKey(Fornecedor, models.DO_NOTHING, db_column='Nome_F')  # Field name made lowercase.
-    nome_p = models.CharField(db_column='Nome_P', max_length=100)  # Field name made lowercase.
-    quantidade = models.SmallIntegerField(db_column='Quantidade')  # Field name made lowercase.
+    nome_f = models.ForeignKey(Fornecedor, models.DO_NOTHING, db_column='Nome Fornecedor')  # Field name made lowercase.
+    nome_p = models.CharField("Nome do produto", db_column='Nome_P', max_length=100)  # Field name made lowercase.
+    quantidade = models.SmallIntegerField("Quantidade", db_column='Quantidade')  # Field name made lowercase.
     categoria_p = models.ForeignKey(Categoria, models.DO_NOTHING, db_column='categoria_p')  # Field name made lowercase.
-    imagem = models.ImageField(db_column='Imagem',upload_to='media')
-    descricao = models.TextField(db_column='Descricao_P')
+    imagem = models.ImageField("Imagem", db_column='Imagem',upload_to='media')
+    descricao = models.TextField("Descrição",db_column='Descricao_P')
     custo_p = models.DecimalField("Custo", decimal_places=2, max_digits=10, db_column='Custo_P')
     preco_p = models.DecimalField("Preço", decimal_places=2, max_digits=10, db_column='Preço_P')
     

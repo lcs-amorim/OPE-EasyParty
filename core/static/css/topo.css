@@ -1,8 +1,15 @@
 /*Menu usuario*/
+#menu1{
+	display: none !important;
+}
+
+#menu2{
+	display: none !important;
+}
 
 .menu_usuario{
 	display: grid;
-    grid-template-columns: 16.66% 25% 22% 12% 12% 12%;
+    grid-template-columns: 9.66% 31% 20% 12% 12% 12%;
     grid-template-rows: 35px;
     width: 100%;
     background-color: #f39c12;
@@ -11,7 +18,7 @@
 .menu_usuario li{
  	display: inline;
  	text-align: center;
- 	padding-top: 3%;
+ 	padding-top: 1%;
 }
 
 .menu_usuario li a{
@@ -48,6 +55,73 @@
     grid-column-end: 6;
 }
 
+/*______________________________ menu_usuário - Responsivo_______________________________________*/
+
+/* iPads (restrato e paisagem) */
+@media only screen and (max-width :1330px) {
+
+	.menu_usuario{
+		display: grid;
+	    grid-template-columns: 0.66% 41% 20% 12% 12% 12%;
+	    grid-template-rows: 35px;
+	    width: 100%;
+	    background-color: #f39c12;
+	 }
+
+}
+
+/*______________________________ menu_usuário - Responsivo_______________________________________*/
+
+/* iPads (restrato) */
+@media only screen and (max-width :1025px) {
+
+	.item1{
+		display: none !important;
+	}
+
+	#menu2{
+	display: inline !important;
+	}
+
+		.menu_usuario{
+		display: grid;
+	    grid-template-columns: 3.66% 23% 20% 20% 19% 12%;
+	 }
+}
+
+/*______________________________ menu_usuário - Responsivo_______________________________________*/
+/* Smartphone (retrato) */
+@media only screen and (max-width :575px) {
+	#menu2{
+		display: none !important;
+	}
+
+	#menu1{
+		display: inline !important;
+	}
+
+	.item1{
+		display: none !important;
+	}
+	.item2{
+		display: none !important;
+	}
+	.item3{
+		display: none !important;
+	}
+	.item4{
+		display: none !important;
+	}
+
+	.menu_usuario {
+    	display: grid;
+    	grid-template-columns: 45%;
+    }	
+}
+
+/*______________________________ menu_usuário - Responsivo - FIM _______________________________________*/
+
+
 /*Conteudo*/
 .conteudo{
 	display: grid;
@@ -57,8 +131,8 @@
 
 /*Logo*/
 .logo img {
-    width: 210px;
-    height: 107px;
+    width: 240px;
+    height: 112px;
 }
 
 /*Campo pesquisa*/
@@ -129,6 +203,58 @@
 .carrinho_button img{
 	width: 30px;
     height: 30px;
+}
+
+/*______________________________ conteudo - Responsivo_______________________________________*/
+
+/* iPads (restrato e paisagem) */
+@media only screen and (max-width :962px) {
+	.conteudo{
+		display: grid;
+   		grid-template-columns:  20% 21% 14% 12% 32%;
+    	grid-template-rows: 100px;
+	}
+
+	.logo img {
+		width: 160px;
+    	height: 99px;
+	}
+
+	.carrinho{
+		grid-row: 1;
+		grid-column-start: 5; 
+	    grid-column-end: 5;
+	    margin-top: 8%;
+	}
+}
+
+/*______________________________ conteudo - Responsivo_______________________________________*/
+
+/* iPads (restrato e paisagem) */
+@media only screen and (max-width :790px) {
+	
+	.carrinho{
+		display: none !important; 
+	}
+
+	.conteudo{
+		display: grid;
+	    grid-template-columns: 35% 21% 14% 12% 32%;
+	 }
+
+	 .pesquisa {
+    margin-top: 38px;
+	}
+}
+
+/*______________________________ conteudo - Responsivo_______________________________________*/
+
+/* iPads (restrato e paisagem) */
+@media only screen and (max-width :455px) {
+		.conteudo{
+			display: grid;
+	   		grid-template-columns: 47% 21% 14% 12% 32%;
+	 }
 }
 
 
