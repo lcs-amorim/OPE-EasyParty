@@ -1,83 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="UTF-8">
-	<title>Si Lima - Festas e Eventos</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1"/>
-	<link rel="stylesheet" type="text/css" href="static/css/rodape.css">
-	<link rel="stylesheet" type="text/css" href="static/css/main.css">
-	<link rel="stylesheet" type="text/css" href="static/css/slider.css">
-	<link rel="stylesheet" type="text/css" href="static/css/css_topo/grid.css"/>
-	<link rel="stylesheet" type="text/css" href="static/css/css_topo/search.css"/>
-	<link rel="stylesheet" type="text/css" href="static/css/css_topo/teste-hvr.css"/>
-</head>
-
-<body>
-	<header>
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<div class="wrapper header center link">
-		  <div class="box box1 hvr-fade"><a href="index"><div class="image"></div></a></div>
-		  <div class="box box2 hvr-fade"><a href="Menu"><div class="image1">Menu</div></a></div>
-		  <div class="box hvr-fade"><a href="Empresa"><div class="image2">Empresa</div></a></div>
-		  <div class="box hvr-fade"><a href="Produtos"><div class="image3">Produtos</div></a></div>
-		  <div class="box hvr-fade"><a href="Kits"><div class="image4">Kit Festa</div></a></div>
-		  <div class="box hvr-fade"><a href="Alugue"><div class="image5">Alugue</div></a></div>
-		  <div class="box hvr-fade"><a href="Carrinho"><div class="image6">Carrinho</div></a></div>
-		  <div class="box hvr-fade"><a href="Login"><div class="image7">Login</div></a></div>
-		</div>
-		<div id="wrap">
-		  <form action="" autocomplete="on">
-		  <input id="search" name="search" type="text" placeholder="O que está procurando?"><input id="search_submit" value="Rechercher" type="submit">
-		  </form>
-		</div>
-	</header>
-		
-		{% block conteudo %}
-
-		
+  <meta charset="utf-8">
+  <title>Si Lima - Festas e Eventos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <!--CSS externo bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  
+  <!--CSS interno-->
+  <link rel="stylesheet" href="static/css/boot/bootstrap.min.css" media="screen" />
+  <link rel="stylesheet" href="static/css/boot/custom.min.css" media="screen" />
+  <link rel="stylesheet" href="static/css/slider.css">
+  <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="static/css/topo.css">
 
 
-		{% endblock %}
-		
-<footer class="rodape">
-		<img class="arabesco" src="static/images/Arabesco.png">
-		<img class="arabesco_bottom" src="static/images/Arabesco.png">
-		<p class="servico">Serviços</p>
-	<nav class="menu_rodape">	
-		<picture class="elipse_Silima"><a href="completar"><img  class="img_silima" src="static/images/Logo.png"></a></picture>
-		<picture class="elipse_calculadora"><a href="completar"><img class="img_calculadora" src="static/images/calculadora.png"></a></picture>
-		<picture class="elipse_festas"><a href="completar"><img class="img_festa" src="static/images/Festas.png"></a></picture>
-		<picture class="elipse_servicos"><a href="completar"><img class="img_servico" src="static/images/servico.png"></a></picture>
-		<picture class="elipse_nossas-dicas"><a href="completar"><img class="img_nossasdicas" src="static/images/nossasdicas.png"></a></picture>
-		<picture class="elipse_fale-conosco"><a href="completar"><img class="img_fale-conosco" src="static/images/faleconosco.png"></a></picture>
-		<picture class="elipse_contato"><a href="completar"><img class="img_contato" src="static/images/contato.png"></a></picture>
-	
-		<p class="tit_silima">A Silima</p>
-		<p class="tit_calculadora">Calculadora</p>
-		<p class="tit_festas">Festas</p>
-		<p class="tit_servicos">Serviços</p>
-		<p class="tit_nossasdicas">Nossas Dicas</p>
-		<p class="tit_fale-conosco">Fale Conosco</p>
-		<p class="tit_contato">Contato</p>
+    <nav class="menu_usuario">
+      <li class="item1">Olá, Seja bem-vindo!<a href=""> - Entrar</a><span><img src="static/images/topo/login.png"></span></li>
+      <li class="item2"><a href="">Minha conta</a></li>
+      <li class="item3"><a href="">Meus pedidos </a></li>
+      <li class="item4"><a href="">Contato</a></li>   
+    </nav>
 
-	</nav>
-	<section class="obrigado">
-		<p>OBRIGADO POR NOS VISITAR! VOLTE SEMPRE</p>
-	</section>
-	<section class="pagamento">
-		<p>Formas de Pagamento:</p>
-		<img class="img_pagamentos" src="static/images/Formas_de_Pagamento.PNG">
-		<p>Todos os pagamentos são processadors por: Pagseguro</p>
-		<img class="img_selos" src="static/images/selos.png">
-		<p>Este trabalho é fruto intelectual dos alunos de Sistemas de Informações - 2017/1 - Faculdade Impacta Técnologia Responsável pelo sistema Easy Party </p>
-	</section>
+    <section class="conteudo">
+      <div class="logo">
+        <img src="static/images/topo/logo_silima.png">  
+      </div>
 
-	</footer>
+      <div class="pesquisa">
+        <input type="text" placeholder="Search..." class="pesquisa-input">
+        <button class="pesquisa-button"><img src="static/images/topo/btn_busca.png"></button>
+      </div>
 
-<script src="static/js/jquery.js"></script>
-<script src="static/js/slider.js"></script>
+      <div class="carrinho">
+          <button class="carrinho_button"><img src="static/images/topo/carrinho.png"> Meu carrinho ( 0 ) </button>
+      </div>  
+    </section>
+
+     <nav class="menu_categorias">
+      <div class="main clearfix">
+        <nav id="menu" class="nav">         
+          <ul>
+            <li>
+              <a href="#">
+                <span class="icon">
+                  <i aria-hidden="true"><img src="static/images/topo/icones_menu/decoracao.png"></i>
+                </span>
+                <span>Decoração</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon"> 
+                  <i aria-hidden="true"><img src="static/images/topo/icones_menu/infantil.png"></i>
+                </span>
+                <span>Festa Infantil</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon">
+                  <i aria-hidden="true"><img src="static/images/topo/icones_menu/joker-face.png"></i>
+                </span>
+                <span>Festa Temática</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon">
+                  <i aria-hidden="true"><img src="static/images/topo/icones_menu/servicos.png"></i>
+                </span>
+                <span>Serviços</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon">
+                  <i aria-hidden="true"><img src="static/images/topo/icones_menu/guloseima.png"></i>
+                </span>
+                <span>Guloseimas</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon">
+                  <i aria-hidden="true"><img src="static/images/topo/icones_menu/descartavel.png"></i>
+                </span>
+                <span>Descartaveis</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div> <!-- /Fim -->
+    </nav>
+
+    <script>
+      //  The function to change the class
+      var changeClass = function (r,className1,className2) {
+        var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+        if( regex.test(r.className) ) {
+          r.className = r.className.replace(regex,' '+className2+' ');
+          }
+          else{
+          r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+          }
+          return r.className;
+      };  
+
+      //  Creating our button in JS for smaller screens
+      var menuElements = document.getElementById('menu');
+      menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+      //  Toggle the class on click to show / hide the menu
+      document.getElementById('menutoggle').onclick = function() {
+        changeClass(this, 'navtoogle active', 'navtoogle');
+      }
+
+      // http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+      document.onclick = function(e) {
+        var mobileButton = document.getElementById('menutoggle'),
+          buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+        if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+          changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+        }
+      }
+    </script>
+    </header>  
+
+
+    {% block conteudo %}
+
+    
+
+    {% endblock %}
+
+  <div class="container">
+    <footer>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-unstyled">
+            <li class="pull-right"><a href="#top">Voltar ao Topo</a></li>
+            <li><a href="">Início</a></li>
+            <li><a href="">Produtos</a></li>
+            <li><a href="">Contato</a></li>
+            <li><a href="">Termos e Privacidade</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+	</div>
+	  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="static/css/bootbootstrap.min.js"></script>
+    <script src="static/js/menu_categorias.custom.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="static/js/slider.js"></script>
 
 </body>
 </html>

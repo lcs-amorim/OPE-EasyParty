@@ -1,38 +1,87 @@
 {% extends 'base.html' %}
 {% block conteudo %}
-	<main class="container">
-		<!-- INICIO DO MAIN -->
 
-		<!-- INICIO DO SLIDER -->
-		<section class="slider">
-			<section class="slider_box">
-				<article class="slider_item active"  slider-bg="static/images/001.jpg">
-					<div class="slider_content">
-						<!--campo para texto-->
-						</div>
-				</article>
-
-				<article class="slider_item" slider-bg="static/images/002.jpg">
-					<div class="slider_content">
-						<!--campo para texto-->
-					</div>
-				</article>
-
-				<article class="slider_item" slider-bg="static/images/003.jpg">
-					<div class="slider_content">
-						<!--campo para texto-->
-					</div>
-				</article>
-			</section>
-
-			<div class="slider-prev"><</div>
-			<div class="slider-next">></div>
-		</section>
+	<!-- INICIO DO SLIDER -->
+		
+	</br>
+		<div id="first-slider">
+    		<div id="carousel-example-generic" class="carousel slide carousel-fade">
+		        <!-- Indicators -->
+		        <ol class="carousel-indicators">
+		            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+		        </ol>
+		        <!-- Wrapper for slides -->
+	       		<div class="carousel-inner" role="listbox">
+	            
+	            <!-- Item 1 -->
+	            <div class="item active slide1">
+	                <div class="row"><div class="container">
+	                    <div class="col-md-3 text-right">
+	                        <img style="max-width: 200px;"  data-animation="animated zoomInLeft">
+	                    </div>
+	                    	<div class="col-md-9 text-left">
+	                        <h3 data-animation="animated bounceInDown"><!--texto--></h3>
+	                        <h4 data-animation="animated bounceInUp"><!--texto--></h4>             
+	                     </div>
+	                </div></div>
+	             </div> 
+	            
+	            <!-- Item 2 -->
+	            <div class="item slide2">
+	                <div class="row"><div class="container">
+	                    <div class="col-md-7 text-left">
+	                        <h3 data-animation="animated bounceInDown"><!--texto--></h3>
+	                        <h4 data-animation="animated bounceInUp"><!--texto--></h4>   
+	                     </div>
+	                    <div class="col-md-5 text-right">
+	                        <img style="max-width: 200px;"  data-animation="animated zoomInLeft" >
+	                    </div>
+	                </div></div>
+	            </div>
+	            
+	            <!-- Item 3 -->
+	            <div class="item slide3">
+	                <div class="row"><div class="container">
+	                    <div class="col-md-7 text-left">
+	                        <h3 data-animation="animated bounceInDown"><!--texto--></h3>
+	                        <h4 data-animation="animated bounceInUp"><!--texto--></h4>   
+	                     </div>
+	                    <div class="col-md-5 text-right">
+	                        <img style="max-width: 200px;"  data-animation="animated zoomInLeft" >
+	                    </div>     
+	                </div></div>
+	            </div>
+	            
+	            <!-- Item 4 -->
+	            <div class="item slide4">
+	                <div class="row"><div class="container">
+	                    <div class="col-md-7 text-left">
+	                        <h3 data-animation="animated bounceInDown"><!--texto--></h3>
+	                        <h4 data-animation="animated bounceInUp"><!--texto--></h4>   
+	                     </div>
+	                    <div class="col-md-5 text-right">
+	                        <img style="max-width: 200px;"  data-animation="animated zoomInLeft" >
+	                    </div>  
+	                </div>
+	            </div>
+	            <!-- End Item 4 -->
+	    
+	       		</div>
+		        <!-- End Wrapper for slides-->
+		        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		            <i class="fa fa-angle-left"></i><span class="sr-only">Previous</span>
+		        </a>
+		        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		            <i class="fa fa-angle-right"></i><span class="sr-only">Next</span>
+		        </a>
+    		</div>
+		</div>
 		<!-- FIM DO SLIDER -->
+		</br>
 
-		<section class="espacamento"></section> <!-- ESPAÇAMENTO -->
-
-		<!-- Inicio - Banner abaixo slider -->
 		<section class="banner_baixo_slider">
 			<img src="static/images/banner_baixo_slider.jpg">
 		</section>
@@ -40,7 +89,9 @@
 
 		<!-- Inicio - Banner novidades -->		
 		<section class="banner_novidades">
-			<h1 class="titulo_novidade">Lançamentos</h1>
+			<div class="page-header">
+				<h1>Novidades</h1>
+			</div>
 
 			<article class="banner_item_01">
 				<img src="static/images/festa-mario.jpg"> 
@@ -59,46 +110,38 @@
 			</article>
 		</section>
 		<!-- fim - Banner novidades -->	
-		
-		<!-- Inicio - lista de produtos-->
-		<h1 class="titulo">Confira nossos mais novos produtos</h1><br>
-		{% for produto in produtos %}	
-		<section class="lista_produtos centralizar_elemento">
-			<section class="novidades">
-			   		<div class="quadro_produto posicao_01 ">
-					        <a href="produto.html">
-					    {%if produto.imagem and produto.ativo%}		
-					        	<figure class="foto_produto">
-					           		<img src="static/images/fini2.jpg">
-					        	</figure>
-					        	<section class="titulo_produto">{{produto.nome_p}}</section>
-					       	</a>
-				        {%else%}
-				        	<figure class="foto_produto">
-				           		<img src="static/images/produto-sem-imagem2.png">
-				        	</figure>
-				         	<section class="titulo_produto">{{produto.nome_p}}</section>
-				       		</a>      		
-					    {% endif %} 
-					    <section class="preco_produto"><p>{{produto.preco_p}}</p></section>
-					    <section class="botoes_quadro_produto">
-					   
-					    {% if produto.vender %}	
-					       <button>COMPRAR</button>
-			    		{%else%}
-			    			<button>ALUGAR</button>
-			    		{% endif %} 	
-					       <button>MAIS DETALHES</button>
-			    		</section>
-			    						{% empty %}
-											<h1>Nenhum Produto cadastrado</h1>
-			    	{%endfor%}
-			    	</div>
-			    
-			</section>	
-		</section>
+	
+	<section class="espacamento"></section> <!-- ESPAÇAMENTO -->
+		<!-- FIM DO SLIDER -->
 
-		<!-- Fim - lista de produtos-->
-	</main>
-	<!-- FIM DO MAIN -->
-{%endblock%}
+    <div class="container">
+		<div class="page-header">
+			<h1>Produtos</h1>
+		</div>
+		{%for produto in produtos%}
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
+	  		    <div class="thumbnail">
+	  				<a href="#">
+	  				{% if produto.imagem %}	
+	  					<img src="{{produto.imagem.url}}" alt="{{produto.nome_p}}" />
+	  				</a>
+	  				{% else %}
+	  					<img src="static/images/produto-sem-imagem2.png" alt="{{produto.nome_p}}" />
+	  				{% endif %}
+	  				<div class="caption">
+	  					<h3>{{produto.nome_p}}</h3>
+	  					<p>Por R$ {{produto.preco_p}}</p>
+	  				{% if produto.vender %}	
+	  					<p><a href="#" class="btn btn-success" role="button">Comprar</a>
+	  					<a href="#" class="btn btn-default" role="button">Mais detalhes</a></p>	
+	  				{% else %}
+	  					 <p><a href="#" class="btn btn-success" role="button">Alugar</a>
+	  					<a href="#" class="btn btn-default" role="button">Mais detalhes</a></p>	
+	  				{%endif%}
+	  					
+	  				</div>
+	  		    </div>
+			</div>
+		{% endfor %}
+	{%endblock%}

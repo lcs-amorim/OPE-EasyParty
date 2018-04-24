@@ -7,6 +7,8 @@ from core.models import Fornecedor
 from core.models import Contratos
 from core.models import Colaboradores
 from core.models import Produto
+from core.models import Categoria
+
 # Usuario begin
 class UsuarioAdmin(admin.ModelAdmin):
     list_display = ["codigo_u","nome_u","usuario","senha","email_u","cpf","telefone_u","endereco_u","news"]
@@ -35,12 +37,21 @@ class UsuarioAlteraForm(forms.ModelForm):
 #
 #Produto begin
 class ProdutoAdmin(admin.ModelAdmin):
-    list_display = ["codigo_p","nome_f","nome_p","quantidade","categoria_p","imagem","descricao","custo_p","preco_p","vender","ativo"]
-    search_fields = ["nome_f","nome_p","categoria_p"]
+    list_display = ["codigo_p","nome_p","quantidade","categoria_p", "nome_f"]
+    search_fields = ["nome_f","nome_p","categoria_p","codigo_p"]
     filter_horizontal = []
-    ordering = ["categoria_p"]
+    ordering = ["codigo_p"]
     list_filter = []
 #Produto end
+#
+#Categoria begin
+class CategoriaAdmin(admin.ModelAdmin):
+    list_display = ["codigo_p","nome","slug","criado","modificado",]
+    search_fields = ["nome"]
+    filter_horizontal = []
+    ordering = ["nome"]
+    list_filter = []
+#Colaboradores end
 #
 #Fornecedor begin
 class FornecedorAdmin(admin.ModelAdmin):
@@ -69,8 +80,18 @@ class ColaboradoresAdmin(admin.ModelAdmin):
     list_filter = []
 #Colaboradores end
 
+#Categoria begin
+class CategoriaAdmin(admin.ModelAdmin):
+    list_display = ["codigo_cat","nome","slug","criado","modificado",]
+    search_fields = ["nome"]
+    filter_horizontal = []
+    ordering = ["nome"]
+    list_filter = []
+#Colaboradores end
+
 admin.site.register(Usuario,UsuarioAdmin)
 admin.site.register(Fornecedor)
 admin.site.register(Contratos)
-admin.site.register(Produto)
+admin.site.register(Produto, ProdutoAdmin)
 admin.site.register(Colaboradores)
+admin.site.register(Categoria, CategoriaAdmin)
