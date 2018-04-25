@@ -7,6 +7,15 @@
 	display: none !important;
 }
 
+.carrinho_menu_usuario img{
+	width: 33px;
+    height: 33px;
+}
+
+.carrinho_menu_usuario{
+	display: none !important;
+}
+
 .menu_usuario{
 	display: grid;
     grid-template-columns: 9.66% 31% 20% 12% 12% 12%;
@@ -68,6 +77,7 @@
 	    background-color: #f39c12;
 	 }
 
+
 }
 
 /*______________________________ menu_usuário - Responsivo_______________________________________*/
@@ -85,13 +95,21 @@
 
 		.menu_usuario{
 		display: grid;
-	    grid-template-columns: 3.66% 23% 20% 20% 19% 12%;
+	    grid-template-columns: 3.66% 10% 14% 20% 19% 12%;
 	 }
+
+	
+		
 }
 
 /*______________________________ menu_usuário - Responsivo_______________________________________*/
 /* Smartphone (retrato) */
-@media only screen and (max-width :575px) {
+@media only screen and (max-width :840px) {
+	.menu_usuario{
+		display: grid;
+	    grid-template-columns: 3.66% 10% 14% 20% 19% 12%;
+	 }	
+
 	#menu2{
 		display: none !important;
 	}
@@ -117,6 +135,32 @@
     	display: grid;
     	grid-template-columns: 45%;
     }	
+
+    .carrinho_menu_usuario{
+		display: inline !important;
+		grid-row: 1;
+		grid-column-start: 7; 
+   		grid-column-end: 7
+		
+		}	
+
+		.item2{
+			grid-row: 1;
+			grid-column-start: 4; 
+   			grid-column-end: 4;
+		}
+
+		.item3{
+			grid-row: 1;
+			grid-column-start: 5; 
+		    grid-column-end: 5;
+		}
+
+		.item4{
+			grid-row: 1;
+			grid-column-start: 6; 
+	    	grid-column-end: 6;
+		}
 }
 
 /*______________________________ menu_usuário - Responsivo - FIM _______________________________________*/
@@ -141,7 +185,7 @@
 	grid-column-start: 2; 
     grid-column-end: 4;	
     display: inline-flex;
-    margin-top: 7%;
+    margin-top: 40px;
     width: 100%;
     font-size: 16px;
     height: 40px;
@@ -185,7 +229,7 @@
 	grid-row: 1;
 	grid-column-start: 5; 
     grid-column-end: 5;
-    margin-top: 13%;
+    margin-top: 40px;
 }
 
 .carrinho_button {
@@ -209,29 +253,31 @@
 
 /* iPads (restrato e paisagem) */
 @media only screen and (max-width :962px) {
+
 	.conteudo{
 		display: grid;
-   		grid-template-columns:  20% 21% 14% 12% 32%;
+   		grid-template-columns: 23% 35% 3% 8%;
     	grid-template-rows: 100px;
+
 	}
 
 	.logo img {
-		width: 160px;
-    	height: 99px;
+		width: 217px;
+    	height: 115px;
 	}
 
 	.carrinho{
 		grid-row: 1;
 		grid-column-start: 5; 
 	    grid-column-end: 5;
-	    margin-top: 8%;
+	    margin-top: 40px;
 	}
 }
 
 /*______________________________ conteudo - Responsivo_______________________________________*/
 
-/* iPads (restrato e paisagem) */
-@media only screen and (max-width :790px) {
+/* iPads (paisagem) */
+@media only screen and (max-width :840px) {
 	
 	.carrinho{
 		display: none !important; 
@@ -239,22 +285,44 @@
 
 	.conteudo{
 		display: grid;
-	    grid-template-columns: 35% 21% 14% 12% 32%;
-	 }
+	    grid-template-columns: 33% 21% 26% 15% 32%;
+	}	
 
 	 .pesquisa {
-    margin-top: 38px;
+    	margin-top: 40px;
 	}
 }
 
 /*______________________________ conteudo - Responsivo_______________________________________*/
 
-/* iPads (restrato e paisagem) */
-@media only screen and (max-width :455px) {
+/* Smartphone (retrato) */
+@media only screen and (max-width :605px) {
 		.conteudo{
 			display: grid;
-	   		grid-template-columns: 47% 21% 14% 12% 32%;
+	   		grid-template-columns: 100%;
+	   		grid-template-rows: 100px 100px;
 	 }
+
+
+	 .pesquisa {
+	   	grid-row: 2;
+		grid-column-start: 1; 
+	    grid-column-end: 1;
+	    margin-top: 20px;
+	}
+
+	.logo{
+		grid-row: 1;
+		grid-column-start: 1; 
+	    grid-column-end: 1;
+	    text-align: center;
+
+	}
+
+		.logo img {
+		width: 217px;
+    	height: 115px;
+	}
 }
 
 
@@ -696,7 +764,7 @@ a, button {
 	
 	/* When JavaScript is disabled, we hide the menu */
 	.no-js .nav ul {
-		max-height: 30em;
+		max-height: 3em;
 		overflow: hidden;
 	}
 	
@@ -802,8 +870,8 @@ a:hover {
 
 .menu_categorias{
 	text-align: center;
-    font-size: 16px;
-    padding: 1em 4em 0em;;
+    font-size: 14px;
+    padding: 17px 55px 18px;
 }
 
 
