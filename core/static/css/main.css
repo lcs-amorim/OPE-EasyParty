@@ -7,6 +7,10 @@
 	text-align: center;
 }
 
+.banner_baixo_slider img{
+	width: 100%;
+}
+
 /* Inicio - Banner novidades*/
 .banner_novidades{
 	display: grid;
@@ -41,11 +45,26 @@
 	grid-column-start: 4; 
     grid-column-end: 4;
 }
+
+.banner_item_01 img{
+	width: 95%;
+}
+
+.banner_item_02 img{
+	width: 95%;
+}
+
+.banner_item_03 img{
+	width: 95%;
+}
+
+.banner_item_04 img{
+	width: 95%;
+}
 /* Fim - Banner novidades*/
 
 
 /* Inicio - lista produtos*/
-
 
 .centralizar_elemento {
 	height: 100%;
@@ -57,5 +76,53 @@
 	justify-content: center;
 }
 
+
+.produtos{
+	display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 390px 100px;
+    position: relative;
+
+}
+
+.thumbnail {
+	margin: 10px !important;
+}
+
+.page-header h1 {
+    font-size: 3em !important;
+}
+
+/*______________________________ menu_usuário - Responsivo_______________________________________*/
+
+/* iPads (restrato e paisagem) */
+@media only screen and (max-width :1010px) {
+
+	.produtos{
+	    display: grid;
+	    grid-template-columns: 50% 50%;
+	    grid-template-rows: 390px 390px;
+	 }
+
+
+}
+
+/*______________________________ menu_usuário - Responsivo_______________________________________*/
+
+/* iPads (restrato e paisagem) */
+@media only screen and (max-width :655px) {
+
+	.produtos{
+	    display: grid;
+	    grid-template-columns: 100%;
+	    grid-template-rows: 390px 390px 390px;
+	 }
+
+
+}
+
+
+
+/* Fim - lista produtos*/
 
 /*FIM - MAIN*/
