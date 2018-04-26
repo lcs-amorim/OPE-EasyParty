@@ -1,12 +1,13 @@
 from django.conf.urls import url
 from django.contrib import admin
-from core.views import index 
+from core.views import index, login 
 from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index', index, name="index"),
+    url(r'^login', login, name="login"),
     url(r'^$', index)
 ]
 

@@ -1,0 +1,144 @@
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.utility-page-wrap{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	max-height: 100%;
+	max-width: 100%;
+	-webkit-box-pack:center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content:center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.utility-page-content{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width:260px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.utility-page-form{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+
+.squad{
+	width:80%;
+	max-width:800px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 11px 16px 90px;
+	box-shadow: 1px 1pxp 3px 0 rgba(0, 0, 0, .37);
+}
+
+.squad input{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box
+}
+
+
+.body{
+    margin-top:81px;
+    background-repeat: repeat;
+}
+
+h1{
+	
+	padding-left:0px;
+	font-family:'Changa One', Impact, sans-serif;
+	font-size: 25px;
+	text-align: center;
+	
+}
+
+.submit-button-2{
+	margin-right: 0px;
+	margin-bottom: 9px;
+	margin-left: 350px;
+	padding-right: 30px;
+	float:left;
+	background-color: #f55c36;
+	-webkit-perspective: 983px;
+	perspective: 983px;
+	-webkit-transform: scale(1.15);
+	-ms-transform: scale(1.15);
+	transform: scale(1.15);
+	text-align:center;
+}
+
+@media (max-width: 991px){
+.txt-block{
+	margin-top: -418;
+	margin-right: -34px;
+ }
+
+.submit-button-2{
+	margin-left: 253px;
+ }
+}
+
+@media (max-width: 767px){
+.txt-block{
+	margin-top: -419px;
+	margin-right: -45px;
+	padding-bottom: 0px;
+}
+.submit-button-2{
+	margin-left: 177px;
+}
+}
+@media (max-width: 479px){
+	.text-block{
+	margin-right: -41px;
+	padding-right: 0px;
+}
+.submit-button-2{
+	margin-left: 76px;
+}
+}
+
+
+
+
+	

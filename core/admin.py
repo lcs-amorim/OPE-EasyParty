@@ -21,6 +21,7 @@ class UsuarioForm(forms.ModelForm):
     def save(self, commit=True):
         Usuario = super(UsuarioForm,self).save(commit=False)
         Usuario.setpassword('123@mudar')
+        Usuario.perfil  = 'User'
         if commit:
             Usuario.save()
         return Usuario

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 class Colaboradores(models.Model):
     nome_c = models.CharField(db_column='Nome_C', max_length=100)  # Field name made lowercase.
@@ -84,7 +85,24 @@ class Produto(models.Model):
         verbose_name_plural = 'Produtos'
         ordering = ['codigo_p']   
 
-class Usuario(models.Model):
+class UsuarioUser(BaseUserManager):
+    def _criar_usuario(self, usuario, senha, **campos):
+        if not usuario:
+            raise ValueError("Usuario deve ser declarado")
+        user = self.model(usuario=usuario, **campos)
+        user.set_password(senha)
+        user.save(using=self._db)
+        return user
+    
+    def create_user(self, usuario, senha=None, **campos):
+        return self._criar_usuario(usuario, senha, **campos)
+    
+    def create_superuser(self,usuario,senha=None, **campos):
+        campos.setdefault('perfil','Admin')
+        return self._criar_usuario(usuario,senha,**campos)
+
+
+class Usuario(AbstractBaseUser):
     codigo_u = models.AutoField(db_column='Codigo_U', primary_key=True)  # Field name made lowercase.
     nome_u = models.CharField(db_column='Nome_U', max_length=255)  # Field name made lowercase.
     usuario = models.CharField(db_column='Usuario', unique=True, max_length=100)  # Field name made lowercase.
@@ -95,10 +113,26 @@ class Usuario(models.Model):
     endereco_u = models.CharField(db_column='Endereco_U', max_length=255)  # Field name made lowercase.
     news = models.NullBooleanField(db_column='News')  # Field name made lowercase.
 
+    USERNAME_FIELD = 'usuario'
+    REQUIRED_FIELDS = ['nome_u','email_u','cpf','telefone','endereço']
+    objects = UsuarioUser()
+
     class Meta:
         managed = True
         db_table = 'Usuario'
+        verbose_name = 'Usuario'
+        verbose_name_plural = 'Usuarios'
+        ordering = ['codigo_u']
+    
+    @property
+    def has_module_perms(self, package_mane):
+        return True
+    
+    def has_perm(self, perm, obj=None):
+        return True
 
+    def has_perms(self, perm_list, obj=None):
+        return True
 
 class AuthGroup(models.Model):
     name = models.CharField(unique=True, max_length=80)
