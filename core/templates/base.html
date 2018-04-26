@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="static/css/flexslider.css" type="text/css">
   <link rel="stylesheet" href="static/css/main.css" type="text/css">
   <link rel="stylesheet" href="static/css/topo.css" type="text/css">
+  <link rel="stylesheet" href="static/css/detalhe_produto.css" type="text/css">
 
 
    <!-- Flexslider CSS and JS -->
@@ -28,7 +29,7 @@
       <li class="dropdown"> <!--Menu usuário responsivo fase 2-->
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="menu1">Conta <span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="download">
-              <li><a href="">Entrar</a></li>
+              <li><a href="login.html">Entrar</a></li>
               <li><a href="">Cadastre-se</a></li>
               <li><a href="">Minha conta</a></li>
               <li><a href="">Quem somos</a></li>
@@ -40,13 +41,21 @@
       <li class="dropdown"><!--Menu usuário responsivo fase 1-->
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="menu2">Conta <span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="download">
-              <li><a href="">Entrar</a></li>
+              <li><a href="login.html">Entrar</a></li>
               <li><a href="">Cadastre-se</a></li>
             </ul>
       </li>
         
       <li class="item1">
-        Seja bem-vindo!<a href=""> Cadastre-se</a> ou efetue o <a href="">Login</a><span><img src="static/images/topo/login.png">   </span>
+      {% if user.is_authenticated %}
+         
+         Olá {{user}}, Seja bem-vindo!</a><span><img src="static/images/topo/login.png"></span> <a href="{% url 'sair' %}">Sair</a>
+      </li>
+      {%else%}
+
+        Seja bem-vindo!<a href=""> Cadastre-se</a> ou efetue o <a href="login.html">Login</a><span><img src="static/images/topo/login.png">   </span>
+      {%endif%}
+
       </li>
       <li class="carrinho_menu_usuario"><img src="static/images/topo/carrinho.png"> ( 0 )</li> <!--carrinho de compras responsivo--> 
       <li class="item2"><a href="">Minha conta</a></li>
@@ -55,8 +64,9 @@
     </nav>
 
     <section class="conteudo">
-      <div class="logo">
+      <div class="logo"> <a href="index.html" >
         <img src="static/images/topo/logo_silima.png">  
+         </a> 
       </div>
 
       <div class="pesquisa">

@@ -1,6 +1,6 @@
 from django.contrib import admin
-from django import forms
 from django.contrib.auth.admin import UserAdmin
+from django import forms
 
 from core.models import Usuario
 from core.models import Fornecedor
@@ -21,7 +21,6 @@ class UsuarioForm(forms.ModelForm):
     def save(self, commit=True):
         Usuario = super(UsuarioForm,self).save(commit=False)
         Usuario.setpassword('123@mudar')
-        Usuario.perfil  = 'User'
         if commit:
             Usuario.save()
         return Usuario

@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <title>Si Lima Eventos</title>
-<link rel="stylesheet" type="text/css" href="css/login.css"/>
+<link rel="stylesheet" type="text/css" href="static/css/login.css"/>
 </head>
 <div class='body' align='center'>  
 <h1> Acesse sua conta </h1>
@@ -13,9 +13,9 @@
     <form class="usuario-form" action="" method="POST">
       <p class='squad'>Login</p></br>
           {{form.as_p}}
-          {{% csrf_token %}}
+          {% csrf_token %}
         <input type="submit" name="entrar" class='button' value='Conectar'/>
-      <p class='senha_mensagem'>Esqueceu a senha ?<!-- <a href="{% url 'editar_senha' %}"> -->Clique Aqui !</a></p>  
+      <p class='senha_mensagem'>Esqueceu a senha ?Clique Aqui !</a></p>  
     </form>
   </div>
 </div>
