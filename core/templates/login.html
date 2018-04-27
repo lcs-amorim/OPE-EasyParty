@@ -4,17 +4,16 @@
 <!-- Inicio Login-->
 <head>
 <meta charset="utf-8">
-<title>Si Lima Eventos</title>
-<link rel="stylesheet" type="text/css" href="static/css/login.css"/>
+
 </head>
 <div class='body' align='center'>  
 <h1> Acesse sua conta </h1>
   <div class="squad">
-    <form class="usuario-form" action="" method="POST">
-      <p class='squad'>Login</p></br>
+    <form class="usuario-form squad" action="" method="POST">
+      <p></p></br>
           {{form.as_p}}
           {% csrf_token %}
-        <input type="submit" name="entrar" class='button' value='Conectar'/>
+        <input type="submit" name="entrar" class='button' value='Entrar'/>
       <p class='senha_mensagem'>Esqueceu a senha ?Clique Aqui !</a></p>  
     </form>
   </div>

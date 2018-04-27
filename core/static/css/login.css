@@ -1,3 +1,30 @@
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+input[type=submit]:hover {
+	background-color: #00ff33;
+	color: black;
+}
+
+
 .button {
     background-color: #4CAF50;
     border: none;
@@ -8,7 +35,7 @@
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .utility-page-wrap{
@@ -65,22 +92,14 @@
 	margin-left: auto;
 	padding: 11px 16px 90px;
 	box-shadow: 1px 1pxp 3px 0 rgba(0, 0, 0, .37);
+	background-color:#ff9900;
+	background-repeat: repeat;
 }
-
-.squad input{
-	width: 100%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box
-}
-
 
 .body{
     margin-top:81px;
-    background-repeat: repeat;
+	align-content: center;
+  
 }
 
 h1{
@@ -98,7 +117,7 @@ h1{
 	margin-left: 350px;
 	padding-right: 30px;
 	float:left;
-	background-color: #f55c36;
+	background-color: #ff0000;
 	-webkit-perspective: 983px;
 	perspective: 983px;
 	-webkit-transform: scale(1.15);
@@ -134,10 +153,9 @@ h1{
 	padding-right: 0px;
 }
 .submit-button-2{
-	margin-left: 76px;
+	margin-left:74px;
 }
 }
-
 
 
 
