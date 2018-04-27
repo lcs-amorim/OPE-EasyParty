@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect , HttpResponseRedirect, get_object_or_404
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 from django.views.generic import View, TemplateView, CreateView, UpdateView
 from django.conf import settings 
+from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
+
 #from django.contrib.auth import get_user_model
 
 
@@ -39,6 +40,17 @@ def login(request):
 def contato(request):
 	return render(request,"contato.html")
 #Auntenticação Usuario
+
+
+'''
+def cadastro_usuario(request):
+	form = UserCreationForm()
+    contexto = {
+        'form': form }
+    template_name = 'cadastro_usuario.html'
+    return render(request, template_name, contexto)
+'''
+
 
 @login_required(login_url="entrar")
 def page_user(request):

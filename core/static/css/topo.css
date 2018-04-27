@@ -166,6 +166,7 @@
 /*______________________________ menu_usuário - Responsivo - FIM _______________________________________*/
 
 
+
 /*Conteudo*/
 .conteudo{
 	display: grid;
@@ -192,12 +193,12 @@
 }
 
 .pesquisa-input {
-	width: 100%;
-    font-size: inherit;
-    border: 0.2em solid #7e7;
-    border-radius: 0.5em 0 0 0.5em;
-    padding: 0.2em 0.5em;
-    outline: 0;
+	width: 100% !important;
+    font-size: inherit !important;
+    border: 0.2em solid #7e7!important;
+    border-radius: 0.5em 0 0 0.5em!important;
+    padding: 0.2em 0.5em!important;
+    outline: 0!important;
 }
 
 .pesquisa-input:hover,

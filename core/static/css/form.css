@@ -43,7 +43,7 @@
 
 .wrap-contact100 {
   width: 800px;
-  background: #ff6100;
+  background: #f39c12;
   border-radius: 4px;
   position: relative;
   margin-top: 55px;
@@ -70,7 +70,7 @@
   height: 100px;
   border: 1px solid white;
   border-radius: 50%;
-  background: #ff6100;
+  background: #f39c12;
   top: -55px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -84,11 +84,12 @@
 }
 
 h1 {
-   font-family: Verdana;
-   text-align: center;
-   color: white;
-  
+    font-family: Verdana;
+    text-align: center;
+    color: #2c3e50;
 }
+
+
 
 form {
    max-width: 600px;
@@ -96,14 +97,17 @@ form {
    margin: 20px auto;
  }
   input, textarea {
-     border:0; outline:0;
-     padding: 1em;
-     border-radius: 4px;
-     display: block;
-     width: 100%;
-     margin-top: 1em;
-     font-family: 'Verdana', sans-serif;
-     box-shadow: 0 1px 1px rgba(black, 0.1);
+    border: 0;
+    outline: 0;
+    padding: 1em;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: 'Verdana', sans-serif;
+    box-shadow: 0 1px 1px rgba(black, 0.1);
+    margin-bottom: 1em;
+    height: 5;
      
 }
   textarea {

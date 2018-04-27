@@ -1,7 +1,7 @@
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 0 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -11,7 +11,7 @@ input[type=text], select {
 input[type=password], select {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 0 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -72,14 +72,15 @@ input[type=submit]:hover {
 }
 
 .squad{
-	width:80%;
-	max-width:800px;
-	margin-right: auto;
-	margin-left: auto;
-	padding: 11px 16px 90px;
-	box-shadow: 1px 1pxp 3px 0 rgba(0, 0, 0, .37);
-	background-color:#ff9900;
-	background-repeat: repeat;
+    width: 70%;
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 11px 16px 90px;
+    box-shadow: 1px 1pxp 3px 0 rgba(0, 0, 0, .37);
+    background-color: #ff9900;
+    background-repeat: repeat;
+    max-height: 537px;
 }
 
 .body{
