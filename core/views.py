@@ -35,6 +35,9 @@ def detalhe_produto(request, slug):
 
 def login(request):
 	return render(request,"login.html")
+
+def contato(request):
+	return render(request,"contato.html")
 #Auntenticação Usuario
 
 @login_required(login_url="entrar")
