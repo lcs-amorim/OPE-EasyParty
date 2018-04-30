@@ -68,11 +68,11 @@
 	  					<h3>{{produto.nome_p}}</h3>
 	  					<p>Por R$ {{produto.preco_p}}</p>
 	  				{% if produto.vender %}	
-	  					<p><a href="#" class="btn btn-success" role="button">Comprar</a>
+	  					<p><a href="" class="btn btn-success" role="button">Comprar</a>
 	  					<a href="{{produto.slug}}" class="btn btn-default" role="button">Mais detalhes</a></p>	
 	  				{% else %}
 	  					 <p><a href="#" class="btn btn-success" role="button">Alugar</a>
-	  					<a href="produto.slug" class="btn btn-default" role="button">Mais detalhes</a></p>	
+	  					<a href="{{produto.slug}}" class="btn btn-default" role="button">Mais detalhes</a></p>	
 	  				{%endif%}
 	  					
 	  				</div>

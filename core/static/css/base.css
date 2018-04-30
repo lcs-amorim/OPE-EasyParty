@@ -327,7 +327,7 @@
 }
 
 
-/*Menu Categorias ---------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------Menu Categorias P1-01----------------------------------------------------*/
 @font-face {
 	font-family: 'icomoon';
 	src: url('../fonts/icomoon.eot');
@@ -398,6 +398,7 @@ a, li {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	/*font-size: 1.3em;*/
 	font-weight: 300;
 }
 
@@ -531,7 +532,7 @@ a, button {
 	}
 
 	.icon + span {
-		margin-top: 2.1em;
+		margin-top: 10px;
 		-webkit-transition: margin .5s;
 		-moz-transition: margin .5s;
 		-o-transition: margin .5s;
@@ -541,18 +542,18 @@ a, button {
 
 	/* Animating the height of the element*/
 	.nav a {
-		height: 9em;
+		height: 7em;
 	}
 
 	.no-touch .nav a:hover ,
 	.nav a:active ,
 	.nav a:focus {
-		height: 10em;
+		height: height: 122px;
 	}	
 
 	/* Making the text follow the height animation */
 	.no-touch .nav a:hover .icon + span {
-		margin-top: 2.2em;
+		margin-top: 1.2em;
 		-webkit-transition: margin .5s;
 		-moz-transition: margin .5s;
 		-o-transition: margin .5s;
@@ -565,7 +566,6 @@ a, button {
 		position: relative;
 		display: inline-block;
 		margin: 0 auto;
-		padding: 0.4em;
 		border-radius: 50%;
 		font-size: 1.8em;
 		box-shadow: 0 0 0 30px transparent;
@@ -663,7 +663,7 @@ a, button {
 	.nav li {
 		display: block;
 		float: left;
-		width: 50%;
+		width: 40%;
 	}
 	
 	/* Adding some padding to make the elements look nicer*/
@@ -694,7 +694,7 @@ a, button {
 	.nav li i {
 		display: inline-block;
 		padding: 8% 9%;
-		border: 5navpx solid transparent;
+		border: 4px solid transparent;
 		border-radius: 50%;
 		font-size: 1.5em;
 		background: rgba(255,255,255,0.1);
@@ -718,7 +718,7 @@ a, button {
 @media (min-width: 32.5em) and (max-width: 38.688em) {
 	
 	.nav li span.icon {
-		width: 50%;
+		width: 30%;
 	}
 
 	.nav li .icon + span {
@@ -759,13 +759,14 @@ a, button {
 	.nav .navtoogle{
 		margin: 0;
 		display: block;
+		box-shadow: 1px 1px 1px 1px #f39c123b;
 	}
 	
 	/* Animating the height of the navigation when the button is clicked */
 	
 	/* When JavaScript is disabled, we hide the menu */
 	.no-js .nav ul {
-		max-height: 3em;
+		max-height: 30em;
 		overflow: hidden;
 	}
 	
@@ -833,6 +834,10 @@ a, button {
 	}
 }
 
+/*-----------------------------------------------Menu Categorias P1-02----------------------------------------------------*/
+
+
+
 /* General Demo Style */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
@@ -848,12 +853,17 @@ a, button {
 }
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-body, html { font-size: 17px; padding: 0; margin: 0;}
+body, html { font-size: 15px; padding: 0; margin: 0;}
 
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
 
+body {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	color: #89867e;
+	background: #f9f9f9;
+}
 
 a {
 	color: #333;
@@ -864,33 +874,32 @@ a:hover {
 	color: #fff;
 }
 
-.main {
-	/* max-width: 92.667em; */
-	/* height: 9em; */
-}
-
-.menu_categorias{
-	text-align: center;
-    font-size: 14px;
-    padding: 17px 55px 18px;
-}
-
-
-.menu_categorias h1 {
+.main,
+.container > header {
 	width: 100%;
 	margin: 0 auto;
 	padding: 2em;
 }
 
+.main {
+	max-width: 82.667em;
+}
 
-.menu_categorias > h1 {
+.container > header {
+	text-align: center;
+	font-size: 16px;
+	padding: 4em 2em 3em;
+	background: rgba(0,0,0,0.01);
+}
+
+.container > header h1 {
 	font-size: 2.625em;
 	line-height: 1.3;
 	margin: 0;
 	font-weight: 300;
 }
 
-.menu_categorias header span {
+.container > header span {
 	display: block;
 	font-size: 60%;
 	color: #ceccc6;
