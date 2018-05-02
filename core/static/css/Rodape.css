@@ -1,0 +1,588 @@
+.arabesco_top{
+  display: grid;
+  grid-template-columns:100%;
+  grid-template-rows: auto;
+}
+
+/*ARABESCO TOP_______________________________________________________________________________________________________________________*/
+
+.arabesco{
+  height: 40px;
+  padding-bottom: 10px;
+  margin: auto;
+  text-align: center;
+
+  grid-row:1;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+/*PALAVRA SERVIÇO_______________________________________________________________________________________________________________________*/
+
+.servico {
+  font-family: FuturaBT;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: #c4161c;
+  padding-bottom: 10px;
+  grid-row:2;
+}
+
+/*MENU RODAPE_______________________________________________________________________________________________________________________*/
+
+.menu_rodape{
+	display: grid;
+  grid-template-columns: 11.11% 11.11% 11.11% 11.11% 11.11% 11.11% 11.11% 11.11% 11.11%;
+  grid-row:auto auto;
+}
+
+.elipse_Silima {
+  background-color: #d02424;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 1;
+}
+
+.img_silima {
+  height: 50px;
+  align-content: center;
+  margin: auto;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 1;
+}
+
+.tit_silima {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  align-content: center;
+  margin: auto;
+  grid-row: 2;
+}
+
+.elipse_calculadora {
+  background-color: #d02424;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row: 1;
+}
+
+.img_calculadora {
+  height: 50px;
+  align-content: center;
+  margin: auto;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row: 1;
+}
+
+.tit_calculadora {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  align-content: center;
+  margin: auto;
+  grid-row: 2;
+}
+
+.elipse_festas {
+  background-color: #d02424;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row: 1;
+}
+
+.img_festa {
+  height: 50px;
+  align-content: center;
+  margin: auto;
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row: 1;
+}
+
+.tit_festas {
+  grid-column-start: 4;
+  grid-column-end: 4;
+  align-content: center;
+  margin: auto;
+  grid-row: 2;
+}
+
+.elipse_servicos {
+  background-color: #d02424;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  grid-column-start: 5;
+  grid-column-end: 5;
+  grid-row: 1;
+}
+
+.img_servico {
+  height: 43px;
+  align-content: center;
+  margin: auto; 
+  grid-column-start: 5;
+  grid-column-end: 5;
+  grid-row: 1;
+}
+
+.tit_servicos {
+  grid-column-start: 5;
+  grid-column-end: 5;
+  align-content: center;
+  margin: auto;
+  grid-row: 2;
+}
+
+.elipse_nossas-dicas {
+  background-color: #d02424;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  grid-column-start: 6;
+  grid-column-end: 6;
+  grid-row: 1;
+}
+
+.img_nossasdicas {
+  height: 50px;
+  align-content: center;
+  margin: auto; 
+  grid-column-start: 6;
+  grid-column-end: 6;
+  grid-row: 1;
+}
+
+.tit_nossasdicas {
+  grid-column-start: 6;
+  grid-column-end: 6;
+  align-content: center;
+  margin: auto;
+  grid-row: 2;
+}
+
+.elipse_fale-conosco {
+ background-color: #d02424;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  grid-column-start: 7;
+  grid-column-end: 7;
+  grid-row: 1;
+}
+
+.img_fale-conosco {
+  height: 43px;
+  align-content: center;
+  margin: auto; 
+  grid-column-start: 7;
+  grid-column-end: 7;
+  grid-row: 1;
+}
+
+.tit_fale-conosco {
+  grid-column-start: 7;
+  grid-column-end: 7;
+  align-content: center;
+  margin: auto;
+  grid-row: 2;
+}
+
+.elipse_contato {
+  background-color: #d02424;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  grid-column-start: 8;
+  grid-column-end: 8;
+  grid-row: 1;
+}
+
+.img_contato {
+  height: 43px;
+  align-content: center;
+  margin: auto; 
+  grid-column-start: 8;
+  grid-column-end: 8;
+  grid-row: 1;
+}
+
+.tit_contato{
+  grid-column-start: 8;
+  grid-column-end: 8;
+  align-content: center;
+  margin: auto;
+  grid-row: 2;
+}
+
+.menu_rodape p{
+  font-family: FuturaBT;
+  font-size: 17px;
+  font-weight: bold;
+  color: #c4161c;
+  padding-top: 5px;
+  grid-row: 2;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+/*Arabesco Botton_______________________________________________________________________________________________________________________*/
+
+.arabesco_bottom{
+  display: grid;
+  grid-template-columns:100%;
+  grid-template-rows: auto;
+}
+
+.arabesco_bottom img{
+  height: 40px;
+  padding-bottom: 10px;
+  margin: auto;
+  text-align: center;
+  grid-row:1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+
+}
+
+/*PALAVRA OBRIGADO_______________________________________________________________________________________________________________________*/
+
+.obrigado{
+  display: grid;
+  grid-template-columns:100%;
+  grid-template-rows: auto;
+}
+
+.obrigado p{
+  padding-bottom: 30px;
+  padding-top: 20px; 
+  width: auto;
+  font-family: ComicSansMS;
+  font-size: 20px;
+  color: #c4161c;
+  text-align: center;
+  align-content: center;
+  margin: auto;
+  grid-row:1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+
+}
+
+
+/*Formas de Pagamento_______________________________________________________________________________________________________________________*/
+
+.pagamento{
+  display: grid;
+  grid-template-columns:100%;
+  grid-template-rows: auto;
+}
+
+.pagamento p{
+  text-align: center;
+  font-family: FuturaBT;
+  font-size: 15px;
+	color: #c4161c;
+	font-weight: bold;
+  grid-row:1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.pagamento img{
+  height: 50px;
+  padding-bottom: 10px;
+  margin: auto;
+  text-align: center;
+  grid-row:1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+/*MOBILE_______________________________________________________________________________________________________________________*/
+
+@media only screen and (max-width :640px) {
+.arabesco_top{
+  display: grid;
+  grid-template-columns:100%;
+  grid-template-rows: auto;
+}
+
+.arabesco{
+  height: 20px;
+  padding-bottom: 10px;
+  grid-row:1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.menu_rodape{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row:auto auto auto auto auto auto auto auto;
+}
+
+.elipse_Silima {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row: 1;
+}
+
+.img_silima {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row: 1;
+}
+
+.tit_silima {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  align-content: center;
+  margin: auto;
+  grid-row: 2;
+}
+
+.elipse_calculadora {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 1;
+}
+
+.img_calculadora {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 1;
+}
+
+.tit_calculadora {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 2;
+}
+
+.elipse_festas {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row: 3;
+}
+
+.img_festa {
+  height: 50px;
+  align-content: center;
+  margin: auto;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row: 3;
+}
+
+.tit_festas {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  align-content: center;
+  margin: auto;
+  grid-row: 3;
+}
+
+.elipse_servicos {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 3;
+}
+
+.img_servico {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 3;
+}
+
+.tit_servicos {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 4;
+}
+
+.elipse_nossas-dicas {
+  background-color: #d02424;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row: 9;
+}
+
+.img_nossasdicas {
+  height: 50px;
+  align-content: center;
+  margin: auto; 
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row: 9;
+}
+
+.tit_nossasdicas {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  align-content: center;
+  margin: auto;
+  grid-row: 10;
+}
+
+.elipse_fale-conosco {
+ background-color: #d02424;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row: 11;
+}
+
+.img_fale-conosco {
+  height: 43px;
+  align-content: center;
+  margin: auto; 
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row: 11;
+}
+
+.tit_fale-conosco {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  align-content: center;
+  margin: auto;
+  grid-row: 12;
+}
+
+.elipse_contato {
+  background-color: #d02424;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row: 13;
+}
+
+.img_contato {
+  height: 43px;
+  align-content: center;
+  margin: auto; 
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row: 13;
+}
+
+.tit_contato{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  align-content: center;
+  margin: auto;
+  grid-row: 14;
+}
+
+
+
+/*Arabesco Botton_______________________________________________________________________________________________________________________*/
+
+.arabesco_bottom{
+  display: grid;
+  grid-template-columns:100%;
+  grid-template-rows: auto;
+}
+
+.arabesco_bottom img{
+  height: 40px;
+  padding-bottom: 10px;
+  margin: auto;
+  text-align: center;
+  grid-row:1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+
+}
+
+/*PALAVRA OBRIGADO_______________________________________________________________________________________________________________________*/
+
+.obrigado{
+  display: grid;
+  grid-template-columns:100%;
+  grid-template-rows: auto;
+}
+
+.obrigado p{
+  padding-bottom: 30px;
+  padding-top: 20px; 
+  width: auto;
+  font-family: ComicSansMS;
+  font-size: 20px;
+  color: #c4161c;
+  text-align: center;
+  align-content: center;
+  margin: auto;
+  grid-row:1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+
+}
+
+
+/*Formas de Pagamento_______________________________________________________________________________________________________________________*/
+
+.pagamento{
+  display: grid;
+  grid-template-columns:100%;
+  grid-template-rows: auto;
+}
+
+.pagamento p{
+  text-align: center;
+  font-family: FuturaBT;
+  font-size: 15px;
+  color: #c4161c;
+  font-weight: bold;
+  grid-row:1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.pagamento img{
+  height: 50px;
+  padding-bottom: 10px;
+  margin: auto;
+  text-align: center;
+  grid-row:1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+
+
+
+}
+
+
+
+
