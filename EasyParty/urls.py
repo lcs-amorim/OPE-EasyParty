@@ -6,7 +6,7 @@ from django.conf import settings
 
 from core.views import index, contato
 from core.views import detalhe_produto
-#from core.views import cadastro_usuario
+from core.views import registrar
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^logout',logout, { "next_page":"index.html" }, name="sair"),
     url(r'^(?P<slug>[\w_-]+)/$', detalhe_produto),
     url(r'^contato', contato, name="contato"),
-    #url(r'^cadastre-se', contato, name="cadastre-se")
+    url(r'^registrar',registrar, name = 'registrar') # pagina de cadastro
 ]
 
 # verifica se o django está em modo de desenvolvimento (DEBUG), assim ele vai usar o diretório 

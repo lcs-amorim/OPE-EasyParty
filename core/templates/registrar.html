@@ -7,17 +7,11 @@
 
 </head>
 <div class='body' align='center'>  
-<h1> Acesse sua conta </h1>
+<h1> Cadastre-se </h1>
   <div class="squad">
     <form class="usuario-form squad" action="" method="POST">
-      {% csrf_token %}
-      <p></p></br>
-      {%for field in form %}
-      	{{field.label_tag}}
-      	{{field}}
-      	{{field.errors}}	
-      {% endfor %}
-          
+        {% csrf_token %}   
+         {{ form.as_p }}
           <input type="submit" value="Enviar" id="input-submit" class="button">
       <p class='senha_mensagem'>Esqueceu a senha ?Clique Aqui !</a></p>  
     </form>
