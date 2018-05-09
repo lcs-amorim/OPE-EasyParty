@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index', index, name="index"),
     url(r'^$', index, name='index'),
-    url(r'^login', login, { "template_name":"login.html" }, name='login'),
+    url(r'^login', login, { "template_name":"login.html" }, name='entrar'),
     url(r'^logout',logout, { "next_page":"index.html" }, name="sair"),
     url(r'^(?P<slug>[\w_-]+)/$', detalhe_produto),
     url(r'^contato', contato, name="contato"),

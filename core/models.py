@@ -1,4 +1,24 @@
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+
+
+class UsuarioManager(BaseUserManager):
+    
+    def _criar_usuario(self, user_name, password, **campos):
+        if not user_name:
+            raise ValueError('username deve ser declarado!')
+        user = self.model(user_name=user_name, **campos)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+    
+    def create_user(self, user_name, password=None, **campos):
+        return self._criar_usuario(user_name, password,**campos)
+
+    def create_superuser(self, user_name, password=None, **campos):
+        campos.setdefault('perfil','ADM')
+        return self._criar_usuario(user_name, password,**campos)
+
 
 class Colaboradores(models.Model):
     nome_c = models.CharField(db_column='Nome_C', max_length=100)  # Field name made lowercase.
@@ -82,23 +102,59 @@ class Produto(models.Model):
         db_table = 'Produto'
         verbose_name = 'Produto'
         verbose_name_plural = 'Produtos'
-        ordering = ['codigo_p']   
+        ordering = ['codigo_p']  
 
-class Usuario(models.Model):
+
+class Usuario(AbstractBaseUser):
     codigo_u = models.AutoField(db_column='Codigo_U', primary_key=True)  # Field name made lowercase.
-    nome_u = models.CharField(db_column='Nome_U', max_length=255)  # Field name made lowercase.
-    usuario = models.CharField(db_column='Usuario', unique=True, max_length=100)  # Field name made lowercase.
-    senha = models.CharField(db_column='Senha', max_length=100)  # Field name made lowercase.
-    email_u = models.CharField(db_column='Email_U', max_length=100, blank=True, null=True)  # Field name made lowercase.
-    cpf = models.IntegerField(db_column='CPF', unique=True)  # Field name made lowercase.
-    telefone_u = models.IntegerField(db_column='Telefone_U')  # Field name made lowercase.
-    endereco_u = models.CharField(db_column='Endereco_U', max_length=255)  # Field name made lowercase.
-    news = models.NullBooleanField(db_column='News')  # Field name made lowercase.
+    nome_u = models.CharField("Nome",db_column='Nome_U', max_length=255)  # Field name made lowercase.
+    user_name = models.CharField("Username",db_column='user_name', unique=True, max_length=100)  # Field name made lowercase.
+    password = models.CharField(db_column='password', max_length=200)  # Field name made lowercase.
+    email_u = models.EmailField("E-mail",db_column='Email_U', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    perfil = models.CharField("Perfil", max_length=1)
+    Ativo = models.BooleanField("Ativo", default=True)
+
+    USERNAME_FIELD = 'user_name'
+    REQUIRED_FIELDS = ["nome_u","email_u"]
+    objects = UsuarioManager()
 
     class Meta:
         managed = True
         db_table = 'Usuario'
 
+
+    def get_full_name(self):
+        return self.nome_u
+
+    def get_short_name(self):
+        return self.nome_u
+
+    def __str__(self):
+        return self.nome_u
+
+    @property
+    def is_staff(self):
+        return self.perfil == "ADM"
+
+    def has_module_perms(self, package_name):
+        return True
+
+    def has_perm(self, perm, obj=None):
+        return True
+
+    def has_perms(self, perm_list, obj=None):
+        return True
+
+
+class Cliente(Usuario):
+    cpf = models.IntegerField("CPF", db_column='CPF', unique=True)  # Field name made lowercase.
+    telefone_u = models.IntegerField("Telefone", db_column='Telefone_U')  # Field name made lowercase.
+    endereco_u = models.CharField("Endereço", db_column='Endereco_U', max_length=255)  # Field name made lowercase.
+    news = models.NullBooleanField("Receber novidades", db_column='News')  # Field name made lowercase.
+        
+
+
+    # --------------------------------------------------------------------- // ------------------------------------------------------------#
 
 class AuthGroup(models.Model):
     name = models.CharField(unique=True, max_length=80)

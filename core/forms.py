@@ -1,8 +1,9 @@
 from django import forms
 
-from .models import Usuario
+from core.models import Cliente
 
-class CustomUserCreationForm(UserCreationForm):
-	pass
-			
- 	
+class ClienteForm(forms.ModelForm):
+
+    class Meta:
+        model = Cliente
+        fields = '__all__'
