@@ -15,12 +15,12 @@
   <link rel="stylesheet" href="static/css/boot/bootstrap.min.css" media="screen" />
   <link rel="stylesheet" href="static/css/boot/custom.min.css" media="screen" />
   <link rel="stylesheet" href="static/css/flexslider.css" type="text/css">
-  <link rel="stylesheet" href="static/css/main.css" type="text/css">
-  <link rel="stylesheet" href="static/css/base.css" type="text/css">
+  <link rel="stylesheet" href="static/css/index.css" type="text/css">
+  <link rel="stylesheet" href="static/css/topo.css" type="text/css">
   <link rel="stylesheet" href="static/css/detalhe_produto.css" type="text/css">
   <link rel="stylesheet" href="static/css/login.css" type="text/css">
   <link rel="stylesheet" href="static/css/form.css" type="text/css">
-  <link rel="stylesheet" type="text/css" href="static/css/Rodape.css">
+  <link rel="stylesheet" href="static/css/rodape.css">
 
    <!-- Flexslider CSS and JS -->
 
@@ -54,8 +54,8 @@
          Olá {{user}}, Seja bem-vindo!</a><span><img src="static/images/topo/login.png"></span> <a href="{% url 'sair' %}">Sair</a>
       </li>
       {%else%}
-
-        Seja bem-vindo!<a href="registrar.html"> Cadastre-se</a> ou efetue o <a href="login.html">Login</a><span><img src="static/images/topo/login.png">   </span>
+        <span><img src="static/images/topo/login.png"></span>
+        Seja bem-vindo!<a href="registrar.html"> Cadastre-se</a> ou efetue o <a href="login.html">Login</a>
       {%endif%}
 
       </li>
