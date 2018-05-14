@@ -1,3 +1,5 @@
+input[type=text]{outline:none}
+
 /*Menu usuario*/
 #menu1{
 	display: none !important;
@@ -5,6 +7,15 @@
 
 #menu2{
 	display: none !important;
+}
+
+.dropdown img {
+    width: 35px;
+    height: 30px;
+}
+
+.dropdown img {
+	display: none;
 }
 
 .carrinho_menu_usuario img{
@@ -18,51 +29,90 @@
 
 .menu_usuario{
 	display: grid;
-    grid-template-columns: 9.66% 31% 20% 12% 12% 12%;
+   	grid-template-columns: 22.66% 34.66% 8.66% 8.66% 8.66% 8.66% 7.66%;
     grid-template-rows: 35px;
     width: 100%;
-    background-color: #f39c12;
+    background-color: #fb9f0de0;
+    box-shadow: 1px 1px 1px 1px #00000061;
+
  }
 
 .menu_usuario li{
  	display: inline;
  	text-align: center;
- 	padding-top: 1%;
 }
 
 .menu_usuario li a{
  	text-decoration: none;
- 	color: black;
+}
+
+.txt-branco{
+	color: white;
 }
  
 .item1{
 	grid-row: 1;
-	grid-column-start: 2; 
-    grid-column-end: 2;
+	grid-column-start: 1; 
+    grid-column-end: 3;
+    margin-top: 6px;
 }
 
+
 .item1 img{
-    width: 27px;
-    height: 22px;
+	width: 19px;
+    height: 16px;
 }
+
 
 .item2{
 	grid-row: 1;
-	grid-column-start: 4; 
-    grid-column-end: 4;
+	grid-column-start: 3; 
+    grid-column-end: 3;
+    margin-top: 6px;
 }
 
 .item3{
 	grid-row: 1;
-	grid-column-start: 5; 
+	grid-column-start: 4; 
     grid-column-end: 5;
+    margin-top: 6px;
 }
 
 .item4{
 	grid-row: 1;
+	grid-column-start: 5; 
+    grid-column-end: 5;
+    margin-top: 6px;
+}
+.item4 img{
+    width: 16px;
+    height: 16px;
+}
+.item5{
+	grid-row: 1;
 	grid-column-start: 6; 
     grid-column-end: 6;
+    margin-top: 6px;
 }
+.item5 img{
+	width: 16px;
+    height: 16px;
+}
+
+.item6{
+	grid-row: 1;
+	grid-column-start: 7; 
+    grid-column-end: 7;
+    margin-top: 6px;
+}
+.item6 img{
+    width: 24px;
+    height: 24px;
+    margin-left: 2px;
+}	
+
+
+
 
 /*______________________________ menu_usuário - Responsivo_______________________________________*/
 
@@ -72,9 +122,6 @@
 	.menu_usuario{
 		display: grid;
 	    grid-template-columns: 0.66% 41% 20% 12% 12% 12%;
-	    grid-template-rows: 35px;
-	    width: 100%;
-	    background-color: #f39c12;
 	 }
 
 
@@ -93,10 +140,21 @@
 	display: inline !important;
 	}
 
-		.menu_usuario{
-		display: grid;
-	    grid-template-columns: 3.66% 10% 14% 20% 19% 12%;
-	 }
+	.dropdown img {
+	display: inline;
+	}
+
+	.dropdown {
+    position: relative;
+    margin-top: 1px;
+	}
+
+
+
+	.menu_usuario{
+	display: grid;
+	grid-template-columns: 10.66% 13% 14% 20% 19% 13%;
+	}
 
 	
 		
@@ -104,12 +162,20 @@
 
 /*______________________________ menu_usuário - Responsivo_______________________________________*/
 /* Smartphone (retrato) */
-@media only screen and (max-width :840px) {
+@media only screen and (max-width :860px) {
 	.menu_usuario{
 		display: grid;
-	    grid-template-columns: 3.66% 10% 14% 20% 19% 12%;
+	    grid-template-columns: 3.66% 10% 14% 20% 19% 13%;
 	 }	
+	.dropdown {
+    position: relative;
+    margin-top: 6px;
+	}
 
+	.dropdown img {
+	display: none;
+	}
+	
 	#menu2{
 		display: none !important;
 	}
@@ -127,8 +193,11 @@
 	.item3{
 		display: none !important;
 	}
-	.item4{
+	.item5{
 		display: none !important;
+	}
+	.item6 img{
+	display: none;
 	}
 
 	.menu_usuario {
@@ -160,7 +229,9 @@
 			grid-row: 1;
 			grid-column-start: 6; 
 	    	grid-column-end: 6;
+
 		}
+
 }
 
 /*______________________________ menu_usuário - Responsivo - FIM _______________________________________*/
@@ -170,7 +241,7 @@
 /*Conteudo*/
 .conteudo{
 	display: grid;
-    grid-template-columns: 25% 20% 20% 13% 22% ;
+    grid-template-columns: 25% 20% 14% 13% 22% ;
     grid-template-rows: 100px;
 }
 
@@ -189,66 +260,53 @@
     margin-top: 40px;
     width: 100%;
     font-size: 16px;
-    height: 40px;
+    height: 60px;
 }
 
-.pesquisa-input {
-	width: 100% !important;
-    font-size: inherit !important;
-    border: 0.2em solid #7e7!important;
-    border-radius: 0.5em 0 0 0.5em!important;
-    padding: 0.2em 0.5em!important;
-    outline: 0!important;
+.pesquisa input{
+	width: 100%;
+	padding: 10px;
 }
 
-.pesquisa-input:hover,
-.pesquisa-input:focus {
-    border-color: #4d4;
+
+.pesquisa button{
+	background: #1691be;
+    border: none;
+    width: 100px;
 }
 
-.pesquisa-button {
-    font-size: inherit;
-    border: 0.2em solid #7e7;
-    border-radius: 0 0.5em 0.5em 0;
-    background-color: #7e7;
-    border-left: 0;
-    padding: 0 0.75em;
-    color: white;
-    font-weight: bold;
-    outline: 0;
-    cursor: pointer;
-}
-
-.pesquisa-button:hover,
-.pesquisa-button:focus {
-    border-color: #4d4;
-    background-color: #4d4;
-}
 
 /*Carrinho de compras*/
+
 .carrinho{
-	grid-row: 1;
-	grid-column-start: 5; 
+    grid-row: 1;
+    grid-column-start: 5;
     grid-column-end: 5;
-    margin-top: 40px;
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60px;
+}
+.carrinho_button{
+	border: none;
+    box-shadow: 1px 1px 1px 1px #1691bead;
+    background: #1691be;
+    color: #fff;
 }
 
-.carrinho_button {
-    font-size: inherit;
-    border: 0.2em solid #7e7;
-    border-radius: 0 0.5em 0.5em 0;
-    background-color: #7e7;
-    border-left: 0;
-    padding: 0 0.75em;
-    color: white;
-    font-weight: bold;
-    outline: 0;
-    cursor: pointer;
+.carrinho_button span{
+	color: #00000000;
 }
-.carrinho_button img{
-	width: 30px;
-    height: 30px;
+
+.preco-carrinho{
+    text-align: center;
+    padding-top: 19px;
+    background: #00000000;
+    box-shadow: 1px 1px 1px 1px #0000002e;
 }
+
+
+
 
 /*______________________________ conteudo - Responsivo_______________________________________*/
 
@@ -861,17 +919,12 @@ body, html { font-size: 15px; padding: 0; margin: 0;}
 
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
-	color: #eee;
 	background: #f9f9f9;
+
 }
 
 a {
-	color: #333;
 	text-decoration: none;
-}
-
-a:hover {
-	color: #fff;
 }
 
 .main,

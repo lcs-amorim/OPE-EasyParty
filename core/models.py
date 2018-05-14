@@ -108,7 +108,7 @@ class Produto(models.Model):
 class Usuario(AbstractBaseUser):
     codigo_u = models.AutoField(db_column='Codigo_U', primary_key=True)  # Field name made lowercase.
     nome_u = models.CharField("Nome",db_column='Nome_U', max_length=255)  # Field name made lowercase.
-    user_name = models.CharField("Username",db_column='user_name', unique=True, max_length=100)  # Field name made lowercase.
+    user_name = models.CharField("username",db_column='user_name', unique=True, max_length=100)  # Field name made lowercase.
     password = models.CharField(db_column='password', max_length=200)  # Field name made lowercase.
     email_u = models.EmailField("E-mail",db_column='Email_U', max_length=100, blank=True, null=True)  # Field name made lowercase.
     perfil = models.CharField("Perfil", max_length=1)
@@ -134,7 +134,7 @@ class Usuario(AbstractBaseUser):
 
     @property
     def is_staff(self):
-        return self.perfil == "ADM"
+        return self.perfil == "adm"
 
     def has_module_perms(self, package_name):
         return True
@@ -147,10 +147,10 @@ class Usuario(AbstractBaseUser):
 
 
 class Cliente(Usuario):
-    cpf = models.IntegerField("CPF", db_column='CPF', unique=True)  # Field name made lowercase.
+    cpf = models.IntegerField("CPF", db_column='CPF', unique=True, max_length=11)  # Field name made lowercase.
     telefone_u = models.IntegerField("Telefone", db_column='Telefone_U')  # Field name made lowercase.
     endereco_u = models.CharField("Endereço", db_column='Endereco_U', max_length=255)  # Field name made lowercase.
-    news = models.NullBooleanField("Receber novidades", db_column='News')  # Field name made lowercase.
+    news = models.NullBooleanField("Deseja receber novidades ?", db_column='News', blank=True)  # Field name made lowercase.
         
 
 

@@ -6,4 +6,4 @@ class ClienteForm(forms.ModelForm):
 
     class Meta:
         model = Cliente
-        fields = '__all__'
+        fields = ["nome_u","user_name","email_u","cpf","telefone_u","endereco_u","news"]

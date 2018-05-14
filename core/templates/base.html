@@ -20,49 +20,58 @@
   <link rel="stylesheet" href="static/css/detalhe_produto.css" type="text/css">
   <link rel="stylesheet" href="static/css/login.css" type="text/css">
   <link rel="stylesheet" href="static/css/form.css" type="text/css">
-  <link rel="stylesheet" href="static/css/rodape.css">
+  <link rel="stylesheet" href="static/css/registrar.css" type="text/css">
+  <link rel="stylesheet" href="static/css/rodape.css" type="text/css">
 
-   <!-- Flexslider CSS and JS -->
+
 
 </head>
 
     <nav class="menu_usuario">
-      
-      <li class="dropdown"> <!--Menu usuário responsivo fase 2-->
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="menu1">Conta <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="download">
-              <li><a href="login.html">Entrar</a></li>
-              <li><a href="registrar.html">Cadastre-se</a></li>
-              <li><a href="">Minha conta</a></li>
-              <li><a href="">Quem somos</a></li>
-              <li><a href="contato.html">Contato</a></li>
-            </ul>
-      </li>
-
-
-      <li class="dropdown"><!--Menu usuário responsivo fase 1-->
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="menu2">Conta <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="download">
-              <li><a href="login.html">Entrar</a></li>
-              <li><a href="registrar.html">Cadastre-se</a></li>
-            </ul>
-      </li>
         
-      <li class="item1">
-      {% if user.is_authenticated %}
-         
-         Olá {{user}}, Seja bem-vindo!</a><span><img src="static/images/topo/login.png"></span> <a href="{% url 'sair' %}">Sair</a>
-      </li>
-      {%else%}
-        <span><img src="static/images/topo/login.png"></span>
-        Seja bem-vindo!<a href="registrar.html"> Cadastre-se</a> ou efetue o <a href="login.html">Login</a>
-      {%endif%}
+        <li class="dropdown"> <!--Menu usuário responsivo fase 2-->
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="menu1">Conta <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="download">
+                <li><a href="login.html">Entrar</a></li>
+                <li><a href="registrar.html">Cadastre-se</a></li>
+                <li><a href="">Minha conta</a></li>
+                <li><a href="">Quem somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+              </ul>
+        </li>
 
-      </li>
-      <li class="carrinho_menu_usuario"><img src="static/images/topo/carrinho.png"> ( 0 )</li> <!--carrinho de compras responsivo--> 
-      <li class="item2"><a href="">Minha conta</a></li>
-      <li class="item3"><a href="">Quem somos </a></li>
-      <li class="item4"><a href="contato.html">Contato</a></li> 
+
+        <li class="dropdown"><!--Menu usuário responsivo fase 1-->
+            <span><img src="static/images/topo/menu.png"></span>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="menu2">Conta <span class="caret">
+            <span></a>
+            <ul class="dropdown-menu" aria-labelledby="download">
+              <li><a href="login.html">Entrar</a></li>
+              <li><a href="registrar.html">Cadastre-se</a></li>
+            </ul>
+        </li>
+          
+        <li class="item1">
+        {% if user.is_authenticated %}
+           <span><img src="static/images/topo/login.png"></span> 
+           Olá {{user}}, Seja bem-vindo!</a><a href="{% url 'sair' %}"> Sair</a>
+        </li>
+        {%else%}
+          <span><img src="static/images/topo/login.png"></span>
+          Seja bem-vindo!<a href="registrar.html" class="txt-branco"> Cadastre-se</a> ou efetue o <a href="login.html" class="txt-branco">Login</a>
+        {%endif%}
+
+        </li>
+        <li class="carrinho_menu_usuario"><img src="static/images/topo/carrinho.png"> ( 0 )</li> <!--carrinho de compras responsivo--> 
+        <li class="item2"><a href="">Meus Pedidos</a></li>
+        <li class="item3"><a href="">Minha Conta</a></li>
+        <li class="item4"><span><img src="static/images/topo/whatsapp-logo.png"> </span>(11)0000-0000</li>
+        <li class="item5"><span><img src="static/images/topo/telefone.png"> </span>(11)0000-0000</li>
+        <li class="item6">
+            <span><img src="static/images/topo/facebook-logo.png"></span>
+            <span><img src="static/images/topo/instagram-logo.png"></span>
+        </li> 
+
     </nav>
 
     <section class="conteudo">
@@ -72,12 +81,13 @@
       </div>
 
       <div class="pesquisa">
-        <input type="text" placeholder="Search..." class="pesquisa-input">
+        <input type="text" placeholder="Busca ...">
         <button class="pesquisa-button"><img src="static/images/topo/btn_busca.png"></button>
       </div>
 
       <div class="carrinho">
-          <button class="carrinho_button"><img src="static/images/topo/carrinho.png"> Meu carrinho ( 0 )</button>
+          <button class="carrinho_button"><img src="static/images/topo/carrinho.png">  Carrinho</button>
+          <div class="preco-carrinho"> 0 itens | R$ 0,00 </div>
       </div>  
     </section>
 
@@ -202,13 +212,13 @@
 	</div>
   
 	  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="static/css/bootbootstrap.min.js"></script>
-    <script src="static/js/menu_categorias.custom.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="static/js/slider.js"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+
+    <script src="static/css/bootbootstrap.min.js"></script>
+    <script src="static/js/menu_categorias.custom.js"></script>
     <script src="static/js/jquery.flexslider.js"></script>
     <script src="static/js/slider.js"></script>
     <script src="static/js/menu.js"></script>
