@@ -17,8 +17,8 @@
 		<div class="login-form" action="" method="POST">
 			<div class="sign-in-htm">
 				<form class="group"  action="" method="POST">
-					{{ form.as_p}}
-        			{% csrf_token %}	
+					{% csrf_token %}
+					{{ form.as_p}}	
 					<button type="submit" class="button group" value="Enviar"> Entrar</button>
 				</form>
 				

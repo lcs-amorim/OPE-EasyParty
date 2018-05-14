@@ -16,7 +16,7 @@ class UsuarioManager(BaseUserManager):
         return self._criar_usuario(user_name, password,**campos)
 
     def create_superuser(self, user_name, password=None, **campos):
-        campos.setdefault('perfil','ADM')
+        campos.setdefault('perfil','adm')
         return self._criar_usuario(user_name, password,**campos)
 
 
@@ -64,7 +64,7 @@ class Categoria(models.Model):
     slug = models.SlugField("Identificador", max_length=100)
     criado = models.DateTimeField("Criado em", auto_now_add=True)
     modificado = models.DateTimeField("modificado em", auto_now_add=True)
-    imagem = models.ImageField(db_column='Imagem',upload_to='media')
+    imagem = models.ImageField(db_column='Imagem',upload_to='media', blank=True, null=True)
 
     def __str__(self):
         return self.nome
@@ -147,7 +147,7 @@ class Usuario(AbstractBaseUser):
 
 
 class Cliente(Usuario):
-    cpf = models.IntegerField("CPF", db_column='CPF', unique=True, max_length=11)  # Field name made lowercase.
+    cpf = models.IntegerField("CPF", db_column='CPF', unique=True)  # Field name made lowercase.
     telefone_u = models.IntegerField("Telefone", db_column='Telefone_U')  # Field name made lowercase.
     endereco_u = models.CharField("Endereço", db_column='Endereco_U', max_length=255)  # Field name made lowercase.
     news = models.NullBooleanField("Deseja receber novidades ?", db_column='News', blank=True)  # Field name made lowercase.

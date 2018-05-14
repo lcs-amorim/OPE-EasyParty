@@ -8,6 +8,7 @@ from core.models import Contratos
 from core.models import Colaboradores
 from core.models import Produto
 from core.models import Categoria
+from core.models import Usuario
 
 
 class ClienteForm(forms.ModelForm):
@@ -49,6 +50,7 @@ class ProdutoAdmin(admin.ModelAdmin):
     filter_horizontal = []
     ordering = ["codigo_p"]
     list_filter = []
+    prepopulated_fields = {'slug': ('nome_p',)} # Cria url amigavel para navegador
 #Produto end
 #
 #Categoria begin
@@ -94,6 +96,7 @@ class CategoriaAdmin(admin.ModelAdmin):
     filter_horizontal = []
     ordering = ["nome"]
     list_filter = []
+    prepopulated_fields = {'slug': ('nome',)} # Cria url amigavel para navegador
 #Colaboradores end
 
 admin.site.register(Cliente,ClienteAdmin)
@@ -102,3 +105,4 @@ admin.site.register(Contratos)
 admin.site.register(Produto, ProdutoAdmin)
 admin.site.register(Colaboradores)
 admin.site.register(Categoria, CategoriaAdmin)
+admin.site.register(Usuario)

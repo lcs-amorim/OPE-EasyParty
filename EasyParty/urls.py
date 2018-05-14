@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 from core.views import index, contato
-from core.views import detalhe_produto
+from core.views import produto_unico
 from core.views import registrar
 
 urlpatterns = [
@@ -14,7 +14,7 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^login', login, { "template_name":"login.html" }, name='entrar'),
     url(r'^logout',logout, { "next_page":"index.html" }, name="sair"),
-    url(r'^(?P<slug>[\w_-]+)/$', detalhe_produto),
+    url(r'^(?P<slug>[\w_-]+)/$', produto_unico),
     url(r'^contato', contato, name="contato"),
     url(r'^registrar',registrar, name = 'registrar') # pagina de cadastro
 ]

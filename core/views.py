@@ -23,45 +23,17 @@ def categorias(request):
 	}
 	return render(request, "index.html", contexto)	
 
-def detalhe_produto(request, slug):
+def produto_unico(request, slug):
     contexto = {
         'produto': get_object_or_404(Produto, slug=slug) #verifica se a url existe, caso nao exista ele retorna erro 404
     }
-    template_name = 'detalhe_produto.html'
-    return render(request, template_name, contexto)
+    return render(request, 'produto_unico.html', contexto)
 
 def login_cliente(request):
 	return render(request,"login.html")
 
 def contato(request):
 	return render(request,"contato.html")
-
-
-def checa_cliente(usuario):
-    return usuario.perfil == "cliente"
-
-def checa_colaborador(usuario):
-    return usuario.perfil == "colaborador"
-
-def checa_adm(usuario):
-    return usuario.perfil == "adm"  
-
-
-@login_required(login_url="entrar")
-@user_passes_test(checa_cliente)
-def aluno(request):
-    return render(request, "aluno.html")
-
-@login_required(login_url="entrar")
-@user_passes_test(checa_colaborador)
-def professor(request):
-    return render(request, "professor.html")
-
-@login_required(login_url="entrar")
-@user_passes_test(checa_adm)
-def coordenador(request):
-    return render(request, "coordenador.html") 
-
 
 
 #Auntenticação Usuario
