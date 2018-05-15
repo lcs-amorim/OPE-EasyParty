@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+  
   
   <!--CSS interno-->
   <link rel="stylesheet" href="static/css/boot/bootstrap.min.css" media="screen" />
@@ -19,9 +23,10 @@
   <link rel="stylesheet" href="static/css/topo.css" type="text/css">
   <link rel="stylesheet" href="static/css/detalhe_produto.css" type="text/css">
   <link rel="stylesheet" href="static/css/login.css" type="text/css">
-  <link rel="stylesheet" href="static/css/form.css" type="text/css">
+  <link rel="stylesheet" href="static/css/contato.css" type="text/css">
   <link rel="stylesheet" href="static/css/registrar.css" type="text/css">
   <link rel="stylesheet" href="static/css/rodape.css" type="text/css">
+  <link rel="stylesheet" href="static/css/festa.css" type="text/css">
 
 
 
@@ -129,7 +134,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="{{categoria.slug}}">
                 <span class="icon">
                   <i aria-hidden="true"><img src="static/images/topo/icones_menu/guloseima.png"></i>
                 </span>
@@ -148,9 +153,7 @@
         </nav>
       </div> <!-- /Fim -->
     </div>
-    </nav>
-
-   
+  </nav>
 
     </header>  
 
@@ -160,15 +163,25 @@
     
 
     {% endblock %}
+    <!--newslleter-->
+    <section class="news"> 
+        <figure><img src="static/images/email.png""></figure>
+        <span>NEWSLLETER</span>
+        <input type="text" name="news" value="E-mail">
+        <button class="pesquisa-button">Cadastrar</button>
+    </section>
+    <!--fim - newslleter-->
 
-  <div class=""></div>
+
+
+
     <footer>
       <div class="arabesco_top">
         <img class="arabesco" src="static\images\Figuras\Arabesco.png">
         <p class="servico">Serviços</p>
       </div>
     
-    <nav class="menu_rodape"> 
+      <nav class="menu_rodape"> 
       
         <picture class="elipse_Silima">
           <a href="completar">
@@ -179,8 +192,14 @@
         
         <picture class="elipse_calculadora"><a href="completar"></a></picture><img class="img_calculadora" src="   static\images\Figuras\calculadora.png">
         <p class="tit_calculadora">Calculadora</p>
-        <picture class="elipse_festas"><a href="completar"></picture></a><img class="img_festa" src="static\images\Figuras\Festas.png">
+
+        <picture class="elipse_festas">
+          <a href="festa.html">
+            <img class="img_festa" src="static\images\Figuras\Festas.png">
+          </a>    
+        </picture>    
         <p class="tit_festas">Festas</p>
+
         <picture class="elipse_servicos"><a href="completar"></a></picture><img class="img_servico" src="   static\images\Figuras\servico.png">
         <p class="tit_servicos">Serviços</p>
         <picture class="elipse_nossas-dicas"><a href="completar"></a></picture><img class="img_nossasdicas" src="  static\images\Figuras\nossasdicas.png">
@@ -215,6 +234,7 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 
 
     <script src="static/css/bootbootstrap.min.js"></script>

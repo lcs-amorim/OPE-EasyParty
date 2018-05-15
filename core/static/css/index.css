@@ -136,4 +136,68 @@
 
 /* Fim - lista produtos*/
 
+
+/*______________________________ banner Newslleter_______________________________________*/
+
+.news{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 100%;
+	background: #f09400;
+    height: 115px;
+    box-shadow: 1px 1px 1px 1px #00000047;
+    margin-top: 30px;
+}
+
+.news figure{
+	grid-row: 1;
+	grid-column-start: 1; 
+    grid-column-end: 1;
+}
+
+.news figure img{
+	width: 75px;
+    height: 75px;
+    position: relative;
+    left: 200px;
+    top: 25px;
+}
+
+.news span{
+	grid-row: 1;
+	grid-column-start: 2; 
+    grid-column-end: 2;
+    text-align: center;
+    margin-top: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Roboto,sans-serif; 
+    font-size: 2.2rem; 
+    font-weight: 400;
+    line-height: 2.4rem;
+}
+
+.news input{
+	grid-row: 1;
+	grid-column-start: 3; 
+    grid-column-end: 3;
+    height: 35px;
+    position: relative;
+    top: 40px;
+    padding: 10px;
+}
+
+.news button{
+	grid-row: 1;
+	grid-column-start: 4; 
+    grid-column-end: 4;
+    height: 35px;
+    width: 100px;
+    position: relative;
+    top: 40px;
+    background: #fff;
+    border: none;
+    margin-left: 5px;
+}
+
 /*FIM - MAIN*/

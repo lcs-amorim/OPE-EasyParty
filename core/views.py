@@ -5,7 +5,7 @@ from django.views.generic import View, TemplateView, CreateView, UpdateView
 from django.conf import settings 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from core.forms import ClienteForm
+from core.forms import ClienteForm, EditaContaClienteForm
 from core.models import Produto
 from core.models import Categoria
 
@@ -17,17 +17,25 @@ def index(request):
 	}
 	return render(request, "index.html", contexto)		
 
-def categorias(request):
-	contexto = {
-		"categorias":Categoria.objects.all()
-	}
-	return render(request, "index.html", contexto)	
 
-def produto_unico(request, slug):
+
+def categoria(request, slug):
+    categoria = Categoria.objects.get(slug=slug)  
+    contexto = {
+        'categoria': categoria, 
+        'produtos': Produto.objects.filter(categoria=categoria),
+       
+    }
+    return render(request,'categoria.html', contexto) 
+
+
+
+def produto(request, slug):
     contexto = {
         'produto': get_object_or_404(Produto, slug=slug) #verifica se a url existe, caso nao exista ele retorna erro 404
     }
-    return render(request, 'produto_unico.html', contexto)
+    template_name = 'produto.html'
+    return render(request, template_name ,contexto)
 
 def login_cliente(request):
 	return render(request,"login.html")
@@ -35,11 +43,19 @@ def login_cliente(request):
 def contato(request):
 	return render(request,"contato.html")
 
+def festa(request):
+    return render(request,"festa.html")
+
 
 #Auntenticação Usuario
 @login_required(login_url="entrar")
 def page_user(request):
 	return render(request,'index.html')
+
+
+
+
+
 
 # -----------------------------------------------//---------------------------------#
 
@@ -60,3 +76,38 @@ def registrar(request):
 
 
 # -----------------------------------------------//---------------------------------#
+
+#funcao para alterar conta
+@login_required
+def editarConta(request):
+    template_name = 'editarConta.html'
+    contexto = {}
+    if request.method == 'POST':
+        form = EditaContaClienteForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            form = EditaContaClienteForm(instance=request.user)
+            contexto['success'] = True
+    else:
+        form = EditaContaClienteForm(instance=request.user)
+    contexto['form'] = form
+    return render(request, template_name, contexto)
+
+# -----------------------------------------------//---------------------------------#
+
+#funcao para alterar senha
+@login_required
+def editarSenha(request):
+    template_name = 'editarSenha.html'
+    context = {}
+    if request.method == 'POST':
+        form = PasswordChangeForm(data=request.POST, user=request.user)
+        if form.is_valid():
+            form.save()
+            context['success'] = True
+    else:
+        form = PasswordChangeForm(user=request.user)
+    context['form'] = form
+    return render(request, template_name, context)   
+
+    # -----------------------------------------------//---------------------------------#
