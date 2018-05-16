@@ -1,3 +1,4 @@
+
 /*Rodapé*/
 
 .menu-rodape{
@@ -7,17 +8,26 @@
   text-align: center;
   list-style: none;  
   color: #fff;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 35px;
+  padding-top: 25px;
 }
 
 .style_circulo{
   border-radius: 100%;
   background: #d02424;
-  width: 125px;
-  height: 125px;
+  width: 90px;
+  height: 90px;
   margin: auto;
   padding: 15px;
+}
+
+.texto{
+    right: 19px;
+    color: #d02424;
+    width: 100px;
+    position: relative;
+    top: 20px;
+    text-decoration: none;
 }
 
 .style_circulo:hover{
@@ -26,11 +36,6 @@
     opacity: 0.8;
 }
 
-.menu_rodape li{
-  display: inline;
-  text-align: center;
-
-}
 
 .menu_rodape li a {
   text-decoration: none;
@@ -227,6 +232,16 @@
   grid-row: 2;
   grid-column-start: 3; 
   grid-column-end: 3;
+}
+
+.texto {
+    left: 75px;
+    top: 12px;
+    color: #d02424;
+    width: 100%;
+    position: relative;
+    top: -40px;
+    text-decoration: none;
 }
 
 }
