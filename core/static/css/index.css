@@ -200,4 +200,57 @@
     margin-left: 5px;
 }
 
+/*______________________________ news - Responsivo_______________________________________*/
+
+/* iPads (restrato e paisagem) */
+@media screen and (max-width :1065px) {
+
+	.news figure img {
+	    width: 75px;
+	    height: 75px;
+	    position: relative;
+	    left: 130px;
+	    top: 25px;
+	}
+
+	.news span {
+		font-size: 25px;
+	}
+
+}
+
+/* iPads (restrato e paisagem) */
+@media screen and (max-width :817px) {
+
+	.news figure img {
+	    width: 75px;
+	    height: 75px;
+	    position: relative;
+	    left: 69px;
+	    top: 25px;
+	}
+
+	.news span {
+		font-size: 20px;
+	}
+
+}
+
+
+/* iPads (restrato e paisagem) */
+@media screen and (max-width :617px) {
+
+	.news figure img {
+	    width: 75px;
+	    height: 75px;
+	    position: relative;
+	    left: 23px;
+	    top: 25px;
+	}
+
+	.news span {
+		font-size: 15px;
+	}
+
+}
 /*FIM - MAIN*/

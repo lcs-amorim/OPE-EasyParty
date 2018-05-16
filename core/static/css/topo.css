@@ -29,7 +29,7 @@ input[type=text]{outline:none}
 
 .menu_usuario{
 	display: grid;
-   	grid-template-columns: 22.66% 34.66% 8.66% 8.66% 9.66% 9.66% 5.66%;
+   	grid-template-columns: 19.66% 32.66% 8.66% 10.66% 10.66% 11.66% 5.66%;
     grid-template-rows: 35px;
     width: 100%;
     background-color: #fb9f0de0;
@@ -113,19 +113,6 @@ input[type=text]{outline:none}
 
 
 
-
-/*______________________________ menu_usuário - Responsivo_______________________________________*/
-
-/* iPads (restrato e paisagem) */
-@media only screen and (max-width :1330px) {
-
-	.menu_usuario{
-		display: grid;
-	    grid-template-columns: 0.66% 41% 20% 12% 12% 12%;
-	 }
-
-
-}
 
 /*______________________________ menu_usuário - Responsivo_______________________________________*/
 
