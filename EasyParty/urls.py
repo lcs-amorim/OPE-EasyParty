@@ -18,7 +18,9 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^login', login, { "template_name":"login.html" }, name='entrar'),
     url(r'^logout',logout, { "next_page":"index.html" }, name="sair"),
-    url(r'^(?P<slug>[\w_-]+)/$', produto),
+    #url(r'^(?P<slug>[\w_-]+)/$', produto),
+    url(r'^produto', produto, name="produto"),
+
     url(r'^(?P<slug>[\w_-]+)/$', categoria),
     url(r'^contato', contato, name="contato"),
     url(r'^festa', festa, name="festa"),

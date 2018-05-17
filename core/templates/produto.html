@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+
+
+<div class="container gallery-container">
+
+    <h1>Bala De Goma Fini</h1>
+    <p class="page-description text-center">dados do produto</p>
+    
+    <section class="product">
+        
+        <article class="image_product">
+            <img src="static/images/fini2.jpg">
+            <nav class="navigation_image">
+                 <li class="img"><a href=""><img src="static/images/fini2.jpg"></a></li>
+                 <li class="img"><a href=""><img src="static/images/fini2.jpg"></a></li>
+                 <li class="img"><a href=""><img src="static/images/fini2.jpg"></a></li>   
+            </nav>
+            
+        </article>
+        
+        <article class="dados_product">
+            
+
+        </article>
+
+    </section>
+
+
+    
+</div>    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+
+
+{%endblock%}

@@ -30,12 +30,12 @@ def categoria(request, slug):
 
 
 
-def produto(request, slug):
-    contexto = {
-        'produto': get_object_or_404(Produto, slug=slug) #verifica se a url existe, caso nao exista ele retorna erro 404
-    }
+def produto(request): #, slug):
+    #contexto = {
+    #    'produto': get_object_or_404(Produto, slug=slug) #verifica se a url existe, caso nao exista ele retorna erro 404
+    #}
     template_name = 'produto.html'
-    return render(request, template_name ,contexto)
+    return render(request, template_name)
 
 def login_cliente(request):
 	return render(request,"login.html")
