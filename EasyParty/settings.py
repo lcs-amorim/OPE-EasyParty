@@ -25,7 +25,7 @@ SECRET_KEY = '_vj89-pt+ubkp1!shq-ol0tpoict&f6=%!&c3mb%1una2i7sra'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lcsamorim.pythonanywhere.com']
 
 
 # Application definition
