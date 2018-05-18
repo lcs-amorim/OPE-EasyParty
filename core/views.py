@@ -4,6 +4,8 @@ from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 from django.views.generic import View, TemplateView, CreateView, UpdateView
 from django.conf import settings 
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import render
+
 
 from core.forms import ClienteForm, EditaContaClienteForm
 from core.models import Produto
@@ -11,12 +13,22 @@ from core.models import Categoria
 
 
 
+
 def index(request):
 	contexto = {
 		"produtos":Produto.objects.all()
 	}
-	return render(request, "index.html", contexto)		
+	return render(request, "index.html", contexto)	
 
+def produto(request): #, slug):
+    #contexto = {
+    #    'produto': get_object_or_404(Produto, slug=slug) #verifica se a url existe, caso nao exista ele retorna erro 404
+    #}
+    template_name = 'produto.html'
+    return render(request, template_name)	
+
+def lista_produto(request):
+    pass
 
 
 def categoria(request, slug):
@@ -29,13 +41,11 @@ def categoria(request, slug):
     return render(request,'categoria.html', contexto) 
 
 
+def contato(request):
+    pass
 
-def produto(request): #, slug):
-    #contexto = {
-    #    'produto': get_object_or_404(Produto, slug=slug) #verifica se a url existe, caso nao exista ele retorna erro 404
-    #}
-    template_name = 'produto.html'
-    return render(request, template_name)
+
+
 
 def login_cliente(request):
 	return render(request,"login.html")
@@ -46,14 +56,10 @@ def contato(request):
 def festa(request):
     return render(request,"festa.html")
 
-
 #Auntenticação Usuario
 @login_required(login_url="entrar")
 def page_user(request):
 	return render(request,'index.html')
-
-
-
 
 
 

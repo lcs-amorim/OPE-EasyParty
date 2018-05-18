@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+ {% load static %} 
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
@@ -16,18 +17,18 @@
   
   
   <!--CSS interno-->
-  <link rel="stylesheet" href="static/css/boot/bootstrap.min.css" media="screen" />
-  <link rel="stylesheet" href="static/css/boot/custom.min.css" media="screen" />
-  <link rel="stylesheet" href="static/css/flexslider.css" type="text/css">
-  <link rel="stylesheet" href="static/css/index.css" type="text/css">
-  <link rel="stylesheet" href="static/css/topo.css" type="text/css">
-  <link rel="stylesheet" href="static/css/detalhe_produto.css" type="text/css">
-  <link rel="stylesheet" href="static/css/login.css" type="text/css">
-  <link rel="stylesheet" href="static/css/contato.css" type="text/css">
-  <link rel="stylesheet" href="static/css/registrar.css" type="text/css">
-  <link rel="stylesheet" href="static/css/rodape.css" type="text/css">
-  <link rel="stylesheet" href="static/css/festa.css" type="text/css">
-  <link rel="stylesheet" href="static/css/produto.css" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/boot/bootstrap.min.css' %}" media="screen" />
+  <link rel="stylesheet" href="{% static 'css/boot/custom.min.css'%}" media="screen" />
+  <link rel="stylesheet" href="{% static 'css/flexslider.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/index.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/topo.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/detalhe_produto.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/login.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/contato.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/registrar.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/rodape.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/festa.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/produto.css'%}" type="text/css">
 
 
 
@@ -38,11 +39,11 @@
         <li class="dropdown"> <!--Menu usuário responsivo fase 2-->
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="menu1">Conta <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="login.html">Entrar</a></li>
-                <li><a href="registrar.html">Cadastre-se</a></li>
+                <li><a href="{% url 'index' %}">Entrar</a></li>
+                <li><a href="{% url 'registrar' %}">Cadastre-se</a></li>
                 <li><a href="">Minha conta</a></li>
                 <li><a href="">Quem somos</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
               </ul>
         </li>
 
@@ -256,10 +257,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 
 
-    <script src="static/css/bootbootstrap.min.js"></script>
-    <script src="static/js/menu_categorias.custom.js"></script>
-    <script src="static/js/jquery.flexslider.js"></script>
-    <script src="static/js/slider.js"></script>
-    <script src="static/js/menu.js"></script>
+    <script src="{%static 'css/bootbootstrap.min.js' %}"></script>
+    <script src="{%static 'js/menu_categorias.custom.js' %}"></script>
+    <script src="{%static 'js/jquery.flexslider.js' %}"></script>
+    <script src="{%static 'js/slider.js' %}"></script>
+    <script src="{%static 'js/menu.js' %}"></script>
 </body>
 </html>
